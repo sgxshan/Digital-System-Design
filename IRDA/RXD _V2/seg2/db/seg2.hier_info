@@ -1,0 +1,20 @@
+|seg2
+data_in[0] => ~NO_FANOUT~
+data_in[1] => ~NO_FANOUT~
+data_in[2] => ~NO_FANOUT~
+data_in[3] => ~NO_FANOUT~
+data_in[4] => Decoder0.IN3
+data_in[5] => Decoder0.IN2
+data_in[6] => Decoder0.IN1
+data_in[7] => Decoder0.IN0
+data_in[8] => ~NO_FANOUT~
+data_in[9] => ~NO_FANOUT~
+data_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

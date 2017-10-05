@@ -1,0 +1,6 @@
+|Inverter
+IR => txd.OUTPUTSELECT
+lastbit => txd.DATAB
+txd <= txd.DB_MAX_OUTPUT_PORT_TYPE
+
+

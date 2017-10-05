@@ -1,0 +1,37 @@
+|rxd_controller
+data_in => Selector1.IN3
+data_in => n_state.OUTPUTSELECT
+data_in => n_state.OUTPUTSELECT
+data_in => n_state.OUTPUTSELECT
+data_in => n_state.OUTPUTSELECT
+data_in => load_shift.DATAB
+data_in => parity_check.DATAB
+data_in => clear_bit.DATAB
+data_in => Selector0.IN1
+data_in => Selector2.IN2
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+clk => p_state~1.DATAIN
+half_pulse => Selector0.IN3
+half_pulse => Selector3.IN3
+half_pulse => Selector2.IN0
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => rxd_shift.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => rxd_shift.DATAB
+rxd_shift <= rxd_shift.DB_MAX_OUTPUT_PORT_TYPE
+rxd_count <= rxd_count.DB_MAX_OUTPUT_PORT_TYPE
+reset_baud <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+clear_bit <= clear_bit.DB_MAX_OUTPUT_PORT_TYPE
+load_shift <= load_shift.DB_MAX_OUTPUT_PORT_TYPE
+parity_check <= parity_check.DB_MAX_OUTPUT_PORT_TYPE
+
+

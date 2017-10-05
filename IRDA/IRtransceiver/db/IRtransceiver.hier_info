@@ -1,0 +1,425 @@
+|IRtransceiver
+parity_error <= rxd_parity:inst8.parity_error
+IRDA_RXD => rxd_controller:inst6.data_in
+IRDA_RXD => rxd_shift:inst15.serial_in
+reset => rxd_controller:inst6.reset
+reset => rxd_shift:inst15.reset
+reset => controller:inst.reset
+reset => shift:inst2.reset
+clk => rxd_controller:inst6.clk
+clk => baud_done:inst5.clk
+clk => counter:inst11.clk
+clk => rxd_shift:inst15.clk
+clk => baud_counter:inst4.clk
+clk => controller:inst.clk
+clk => bit_counter:inst12.clk
+clk => shift:inst2.clk
+framing_error <= rxd_parity:inst8.framing_error
+IRDA_TXD <= Inverter:inst3.txd
+send => controller:inst.send
+Input[0] => parity:inst1.data_in[0]
+Input[1] => parity:inst1.data_in[1]
+Input[2] => parity:inst1.data_in[2]
+Input[3] => parity:inst1.data_in[3]
+Input[4] => parity:inst1.data_in[4]
+Input[5] => parity:inst1.data_in[5]
+Input[6] => parity:inst1.data_in[6]
+Input[7] => parity:inst1.data_in[7]
+done_pulse <= baud_counter:inst4.done_pulse
+IR_pulse <= baud_counter:inst4.IR
+delay <= baud_done:inst5.delay_pulse
+baud_done <= baud_done:inst5.done_pulse
+output[0] <= rxd_shift:inst15.data[0]
+output[1] <= rxd_shift:inst15.data[1]
+output[2] <= rxd_shift:inst15.data[2]
+output[3] <= rxd_shift:inst15.data[3]
+output[4] <= rxd_shift:inst15.data[4]
+output[5] <= rxd_shift:inst15.data[5]
+output[6] <= rxd_shift:inst15.data[6]
+output[7] <= rxd_shift:inst15.data[7]
+output[8] <= rxd_shift:inst15.data[8]
+output[9] <= rxd_shift:inst15.data[9]
+parity[0] <= parity:inst1.Data_out[0]
+parity[1] <= parity:inst1.Data_out[1]
+parity[2] <= parity:inst1.Data_out[2]
+parity[3] <= parity:inst1.Data_out[3]
+parity[4] <= parity:inst1.Data_out[4]
+parity[5] <= parity:inst1.Data_out[5]
+parity[6] <= parity:inst1.Data_out[6]
+parity[7] <= parity:inst1.Data_out[7]
+parity[8] <= parity:inst1.Data_out[8]
+parity[9] <= parity:inst1.Data_out[9]
+parity[10] <= parity:inst1.Data_out[10]
+parity[11] <= parity:inst1.Data_out[11]
+segL[0] <= seg2:inst19.data_out[0]
+segL[1] <= seg2:inst19.data_out[1]
+segL[2] <= seg2:inst19.data_out[2]
+segL[3] <= seg2:inst19.data_out[3]
+segL[4] <= seg2:inst19.data_out[4]
+segL[5] <= seg2:inst19.data_out[5]
+segL[6] <= seg2:inst19.data_out[6]
+segR[0] <= seg:inst18.data_out[0]
+segR[1] <= seg:inst18.data_out[1]
+segR[2] <= seg:inst18.data_out[2]
+segR[3] <= seg:inst18.data_out[3]
+segR[4] <= seg:inst18.data_out[4]
+segR[5] <= seg:inst18.data_out[5]
+segR[6] <= seg:inst18.data_out[6]
+
+
+|IRtransceiver|rxd_parity:inst8
+parity_check => framing_error.OUTPUTSELECT
+parity_check => parity_error.OUTPUTSELECT
+in_data[0] => WideXor0.IN0
+in_data[1] => WideXor0.IN1
+in_data[2] => WideXor0.IN2
+in_data[3] => WideXor0.IN3
+in_data[4] => WideXor0.IN4
+in_data[5] => WideXor0.IN5
+in_data[6] => WideXor0.IN6
+in_data[7] => WideXor0.IN7
+in_data[8] => always0.IN1
+in_data[9] => framing_error.DATAB
+parity_error <= parity_error.DB_MAX_OUTPUT_PORT_TYPE
+framing_error <= framing_error.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|rxd_controller:inst6
+data_in => Selector1.IN3
+data_in => Selector4.IN3
+data_in => clear_bit.DATAB
+data_in => Selector0.IN1
+data_in => Selector2.IN1
+data_in => Selector1.IN1
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+clk => p_state~1.DATAIN
+delay_pulse => Selector0.IN3
+delay_pulse => Selector3.IN3
+delay_pulse => Selector2.IN2
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => n_state.OUTPUTSELECT
+done_pulse => rxd_shift.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => rxd_shift.DATAB
+rxd_shift <= rxd_shift.DB_MAX_OUTPUT_PORT_TYPE
+rxd_count <= rxd_count.DB_MAX_OUTPUT_PORT_TYPE
+reset_baud <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+clear_bit <= clear_bit.DB_MAX_OUTPUT_PORT_TYPE
+parity_check <= parity_check.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|baud_done:inst5
+clk => p_count[0].CLK
+clk => p_count[1].CLK
+clk => p_count[2].CLK
+clk => p_count[3].CLK
+clk => p_count[4].CLK
+clk => p_count[5].CLK
+clk => p_count[6].CLK
+clk => p_count[7].CLK
+clk => p_count[8].CLK
+clk => p_count[9].CLK
+clk => p_count[10].CLK
+clk => p_count[11].CLK
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+delay_pulse <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+done_pulse <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|counter:inst11
+clk => p_cnt[0].CLK
+clk => p_cnt[1].CLK
+clk => p_cnt[2].CLK
+clk => p_cnt[3].CLK
+clk => p_cnt[4].CLK
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+count => n_cnt[4].OUTPUTSELECT
+count => n_cnt[3].OUTPUTSELECT
+count => n_cnt[2].OUTPUTSELECT
+count => n_cnt[1].OUTPUTSELECT
+count => n_cnt[0].OUTPUTSELECT
+bit_done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|rxd_shift:inst15
+clk => pshift[0].CLK
+clk => pshift[1].CLK
+clk => pshift[2].CLK
+clk => pshift[3].CLK
+clk => pshift[4].CLK
+clk => pshift[5].CLK
+clk => pshift[6].CLK
+clk => pshift[7].CLK
+clk => pshift[8].CLK
+clk => pshift[9].CLK
+serial_in => nshift[9].DATAB
+rshift => nshift[9].OUTPUTSELECT
+rshift => nshift[8].OUTPUTSELECT
+rshift => nshift[7].OUTPUTSELECT
+rshift => nshift[6].OUTPUTSELECT
+rshift => nshift[5].OUTPUTSELECT
+rshift => nshift[4].OUTPUTSELECT
+rshift => nshift[3].OUTPUTSELECT
+rshift => nshift[2].OUTPUTSELECT
+rshift => nshift[1].OUTPUTSELECT
+rshift => nshift[0].OUTPUTSELECT
+data[0] <= pshift[0].DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= pshift[1].DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= pshift[2].DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= pshift[3].DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= pshift[4].DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= pshift[5].DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= pshift[6].DB_MAX_OUTPUT_PORT_TYPE
+data[7] <= pshift[7].DB_MAX_OUTPUT_PORT_TYPE
+data[8] <= pshift[8].DB_MAX_OUTPUT_PORT_TYPE
+data[9] <= pshift[9].DB_MAX_OUTPUT_PORT_TYPE
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+reset => nshift.OUTPUTSELECT
+
+
+|IRtransceiver|Inverter:inst3
+IR => txd.OUTPUTSELECT
+lastbit => txd.DATAB
+txd <= txd.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|baud_counter:inst4
+clk => p_count[0].CLK
+clk => p_count[1].CLK
+clk => p_count[2].CLK
+clk => p_count[3].CLK
+clk => p_count[4].CLK
+clk => p_count[5].CLK
+clk => p_count[6].CLK
+clk => p_count[7].CLK
+clk => p_count[8].CLK
+clk => p_count[9].CLK
+clk => p_count[10].CLK
+clk => p_count[11].CLK
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+done_pulse <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+IR <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|controller:inst
+send => clear_bit.DATAB
+send => load_shift.DATAB
+send => reset_baud.DATAB
+send => Selector1.IN2
+send => Selector2.IN2
+send => Selector0.IN0
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+clk => p_state~1.DATAIN
+baud_done => n_state.OUTPUTSELECT
+baud_done => n_state.OUTPUTSELECT
+baud_done => n_state.OUTPUTSELECT
+baud_done => shift.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => shift.DATAB
+shift <= shift.DB_MAX_OUTPUT_PORT_TYPE
+count <= count.DB_MAX_OUTPUT_PORT_TYPE
+reset_baud <= reset_baud.DB_MAX_OUTPUT_PORT_TYPE
+clear_bit <= clear_bit.DB_MAX_OUTPUT_PORT_TYPE
+load_shift <= load_shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|bit_counter:inst12
+clk => p_cnt[0].CLK
+clk => p_cnt[1].CLK
+clk => p_cnt[2].CLK
+clk => p_cnt[3].CLK
+clk => p_cnt[4].CLK
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+count => n_cnt[4].OUTPUTSELECT
+count => n_cnt[3].OUTPUTSELECT
+count => n_cnt[2].OUTPUTSELECT
+count => n_cnt[1].OUTPUTSELECT
+count => n_cnt[0].OUTPUTSELECT
+bit_done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|shift:inst2
+clk => pshift[0].CLK
+clk => pshift[1].CLK
+clk => pshift[2].CLK
+clk => pshift[3].CLK
+clk => pshift[4].CLK
+clk => pshift[5].CLK
+clk => pshift[6].CLK
+clk => pshift[7].CLK
+clk => pshift[8].CLK
+clk => pshift[9].CLK
+clk => pshift[10].CLK
+clk => pshift[11].CLK
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+dat[0] => nshift.DATAB
+dat[1] => nshift.DATAB
+dat[2] => nshift.DATAB
+dat[3] => nshift.DATAB
+dat[4] => nshift.DATAB
+dat[5] => nshift.DATAB
+dat[6] => nshift.DATAB
+dat[7] => nshift.DATAB
+dat[8] => nshift.DATAB
+dat[9] => nshift.DATAB
+dat[10] => nshift.DATAB
+dat[11] => nshift.DATAB
+reset => nshift[11].OUTPUTSELECT
+reset => nshift[10].OUTPUTSELECT
+reset => nshift[9].OUTPUTSELECT
+reset => nshift[8].OUTPUTSELECT
+reset => nshift[7].OUTPUTSELECT
+reset => nshift[6].OUTPUTSELECT
+reset => nshift[5].OUTPUTSELECT
+reset => nshift[4].OUTPUTSELECT
+reset => nshift[3].OUTPUTSELECT
+reset => nshift[2].OUTPUTSELECT
+reset => nshift[1].OUTPUTSELECT
+reset => nshift[0].OUTPUTSELECT
+lastbit <= pshift[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|parity:inst1
+data_in[0] => WideXor0.IN0
+data_in[0] => Data_out[2].DATAIN
+data_in[1] => WideXor0.IN1
+data_in[1] => Data_out[3].DATAIN
+data_in[2] => WideXor0.IN2
+data_in[2] => Data_out[4].DATAIN
+data_in[3] => WideXor0.IN3
+data_in[3] => Data_out[5].DATAIN
+data_in[4] => WideXor0.IN4
+data_in[4] => Data_out[6].DATAIN
+data_in[5] => WideXor0.IN5
+data_in[5] => Data_out[7].DATAIN
+data_in[6] => WideXor0.IN6
+data_in[6] => Data_out[8].DATAIN
+data_in[7] => WideXor0.IN7
+data_in[7] => Data_out[9].DATAIN
+Data_out[0] <= <VCC>
+Data_out[1] <= <GND>
+Data_out[2] <= data_in[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= data_in[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= data_in[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= data_in[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= data_in[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= data_in[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= data_in[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= data_in[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= <VCC>
+
+
+|IRtransceiver|seg2:inst19
+data_in[0] => ~NO_FANOUT~
+data_in[1] => ~NO_FANOUT~
+data_in[2] => ~NO_FANOUT~
+data_in[3] => ~NO_FANOUT~
+data_in[4] => Decoder0.IN3
+data_in[5] => Decoder0.IN2
+data_in[6] => Decoder0.IN1
+data_in[7] => Decoder0.IN0
+data_in[8] => ~NO_FANOUT~
+data_in[9] => ~NO_FANOUT~
+data_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IRtransceiver|seg:inst18
+data_in[0] => Decoder0.IN3
+data_in[1] => Decoder0.IN2
+data_in[2] => Decoder0.IN1
+data_in[3] => Decoder0.IN0
+data_in[4] => ~NO_FANOUT~
+data_in[5] => ~NO_FANOUT~
+data_in[6] => ~NO_FANOUT~
+data_in[7] => ~NO_FANOUT~
+data_in[8] => ~NO_FANOUT~
+data_in[9] => ~NO_FANOUT~
+data_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

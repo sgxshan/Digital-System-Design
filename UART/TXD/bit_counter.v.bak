@@ -1,0 +1,30 @@
+module bit_counter (input clk,input clear, input count, output reg bit_done);
+reg [4:0] p_cnt, n_cnt;
+parameter no_bit=10;
+always @(posedge clk)
+	begin
+		if (clear)
+			p_cnt <=5'b0;	
+		else
+			p_cnt <= n_cnt;
+	end
+  
+always @ (p_cnt, count)  
+	begin
+		bit_done = 1'b0;
+		n_cnt = p_cnt;
+		if (p_cnt == no_bit)
+			bit_done = 1'b1;
+		if(count)
+			begin
+				if(p_cnt == no_bit)
+					begin
+						n_cnt = 1'b0;
+					end
+				else
+					begin
+						n_cnt = p_cnt+1'b1;
+					end
+			end
+	end
+endmodule

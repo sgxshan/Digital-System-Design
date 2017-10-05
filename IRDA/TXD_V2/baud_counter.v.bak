@@ -1,0 +1,25 @@
+module baud_counter (input clk,input reset, output reg baud_done);
+reg [11:0] n_count, p_count;
+//parameter baud=1301;
+parameter baud = 10;
+always @(posedge clk)
+	begin
+		if (reset)
+			p_count <= 0;	
+		else
+			p_count <= n_count;
+	end
+	
+always @(p_count)
+  begin
+		baud_done = 1'b0;
+		n_count = p_count;
+		if(p_count == baud)
+			begin
+				baud_done = 1'b1;
+				n_count = 12'b0;
+			end
+		else
+			n_count=p_count+1'b1;
+  end
+endmodule

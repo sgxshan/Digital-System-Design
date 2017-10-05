@@ -1,0 +1,111 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 15:35:34  December 07, 2015
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		IRtransceiver_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY IRtransceiver
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:35:34  DECEMBER 07, 2015"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_A13 -to Input[7]
+set_location_assignment PIN_B13 -to Input[6]
+set_location_assignment PIN_C13 -to Input[5]
+set_location_assignment PIN_AC13 -to Input[4]
+set_location_assignment PIN_AD13 -to Input[3]
+set_location_assignment PIN_AF14 -to Input[2]
+set_location_assignment PIN_AE14 -to Input[1]
+set_location_assignment PIN_P25 -to Input[0]
+set_location_assignment PIN_V2 -to reset
+set_location_assignment PIN_P23 -to send
+set_location_assignment PIN_AA20 -to framing_error
+set_location_assignment PIN_AE22 -to parity_error
+set_location_assignment PIN_N9 -to segL[6]
+set_location_assignment PIN_P9 -to segL[5]
+set_location_assignment PIN_L7 -to segL[4]
+set_location_assignment PIN_L6 -to segL[3]
+set_location_assignment PIN_L9 -to segL[2]
+set_location_assignment PIN_L2 -to segL[1]
+set_location_assignment PIN_L3 -to segL[0]
+set_location_assignment PIN_M4 -to segR[6]
+set_location_assignment PIN_M5 -to segR[5]
+set_location_assignment PIN_M3 -to segR[4]
+set_location_assignment PIN_M2 -to segR[3]
+set_location_assignment PIN_P3 -to segR[2]
+set_location_assignment PIN_P4 -to segR[1]
+set_location_assignment PIN_R2 -to segR[0]
+set_location_assignment PIN_AE25 -to IRDA_RXD
+set_location_assignment PIN_AE24 -to IRDA_TXD
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_location_assignment PIN_B25 -to pin_name1
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name VERILOG_FILE ../TXD_V2/Inverter/Inverter.v
+set_global_assignment -name VERILOG_FILE "../RXD _V2/seg2/seg2.v"
+set_global_assignment -name VERILOG_FILE "../RXD _V2/seg/seg.v"
+set_global_assignment -name VERILOG_FILE "../RXD _V2/rxd_shift/rxd_shift.v"
+set_global_assignment -name VERILOG_FILE "../RXD _V2/rxd_parity/rxd_parity.v"
+set_global_assignment -name VERILOG_FILE "../RXD _V2/rxd_controller/rxd_controller.v"
+set_global_assignment -name VERILOG_FILE "../RXD _V2/counter/counter.v"
+set_global_assignment -name VERILOG_FILE "../RXD _V2/baud_done/baud_done.v"
+set_global_assignment -name VERILOG_FILE ../TXD_V2/shift.v
+set_global_assignment -name VERILOG_FILE ../TXD_V2/parity.v
+set_global_assignment -name VERILOG_FILE ../TXD_V2/controller.v
+set_global_assignment -name VERILOG_FILE ../TXD_V2/bit_counter.v
+set_global_assignment -name VERILOG_FILE ../TXD_V2/baud_counter.v
+set_global_assignment -name BDF_FILE IRtransceiver.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "H:/Liverpool/ELEC373/IRDA/IRtransceiver/Waveform.vwf"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

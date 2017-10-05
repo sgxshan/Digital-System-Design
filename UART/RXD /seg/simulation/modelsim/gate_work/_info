@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Liverpool\ELEC373\Assignment 1\UART\RXD _V2\seg\simulation\modelsim
+vseg
+!i10b 1
+!s100 PcVCDFCQaQQNe0:jd=EdW1
+Iz[28JL364Tj?@Qkziz4AY1
+VM?iZDjRi?iga7F;U_Fi>B3
+Z1 dF:\Liverpool\ELEC373\Assignment 1\UART\RXD _V2\seg\simulation\modelsim
+w1447243212
+8seg.vo
+Fseg.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1447590160.440000
+!s107 seg.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|seg.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

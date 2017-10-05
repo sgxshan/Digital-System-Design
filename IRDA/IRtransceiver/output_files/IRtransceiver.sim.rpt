@@ -1,0 +1,738 @@
+Simulator report for IRtransceiver
+Thu Dec 10 19:37:24 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 99.0 us      ;
+; Simulation Netlist Size     ; 471 nodes    ;
+; Simulation Coverage         ;      63.48 % ;
+; Total Number of Transitions ; 710173       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                              ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                           ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                 ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                  ;               ;
+; Vector input source                                                                        ; H:/Liverpool/ELEC373/IRDA/IRtransceiver/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                   ; On            ;
+; Check outputs                                                                              ; Off                                                  ; Off           ;
+; Report simulation coverage                                                                 ; On                                                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                  ; Off           ;
+; Detect glitches                                                                            ; Off                                                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                  ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                 ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      63.48 % ;
+; Total nodes checked                                 ; 471          ;
+; Total output ports checked                          ; 471          ;
+; Total output ports with complete 1/0-value coverage ; 299          ;
+; Total output ports with no 1/0-value coverage       ; 104          ;
+; Total output ports with no 1-value coverage         ; 124          ;
+; Total output ports with no 0-value coverage         ; 152          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                              ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; Node Name                                         ; Output Port Name                                  ; Output Port Type ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; |IRtransceiver|IRDA_RXD                           ; |IRtransceiver|IRDA_RXD                           ; out              ;
+; |IRtransceiver|clk                                ; |IRtransceiver|clk                                ; out              ;
+; |IRtransceiver|IRDA_TXD                           ; |IRtransceiver|IRDA_TXD                           ; pin_out          ;
+; |IRtransceiver|done_pulse                         ; |IRtransceiver|done_pulse                         ; pin_out          ;
+; |IRtransceiver|IR_pulse                           ; |IRtransceiver|IR_pulse                           ; pin_out          ;
+; |IRtransceiver|delay                              ; |IRtransceiver|delay                              ; pin_out          ;
+; |IRtransceiver|baud_done                          ; |IRtransceiver|baud_done                          ; pin_out          ;
+; |IRtransceiver|output[9]                          ; |IRtransceiver|output[9]                          ; pin_out          ;
+; |IRtransceiver|output[8]                          ; |IRtransceiver|output[8]                          ; pin_out          ;
+; |IRtransceiver|output[7]                          ; |IRtransceiver|output[7]                          ; pin_out          ;
+; |IRtransceiver|output[6]                          ; |IRtransceiver|output[6]                          ; pin_out          ;
+; |IRtransceiver|output[5]                          ; |IRtransceiver|output[5]                          ; pin_out          ;
+; |IRtransceiver|output[4]                          ; |IRtransceiver|output[4]                          ; pin_out          ;
+; |IRtransceiver|segL[6]                            ; |IRtransceiver|segL[6]                            ; pin_out          ;
+; |IRtransceiver|segL[5]                            ; |IRtransceiver|segL[5]                            ; pin_out          ;
+; |IRtransceiver|segL[4]                            ; |IRtransceiver|segL[4]                            ; pin_out          ;
+; |IRtransceiver|segL[3]                            ; |IRtransceiver|segL[3]                            ; pin_out          ;
+; |IRtransceiver|segL[2]                            ; |IRtransceiver|segL[2]                            ; pin_out          ;
+; |IRtransceiver|segL[1]                            ; |IRtransceiver|segL[1]                            ; pin_out          ;
+; |IRtransceiver|segL[0]                            ; |IRtransceiver|segL[0]                            ; pin_out          ;
+; |IRtransceiver|segR[6]                            ; |IRtransceiver|segR[6]                            ; pin_out          ;
+; |IRtransceiver|seg:inst18|WideOr0                 ; |IRtransceiver|seg:inst18|WideOr0                 ; out0             ;
+; |IRtransceiver|seg2:inst19|WideOr0                ; |IRtransceiver|seg2:inst19|WideOr0                ; out0             ;
+; |IRtransceiver|seg2:inst19|WideOr1                ; |IRtransceiver|seg2:inst19|WideOr1                ; out0             ;
+; |IRtransceiver|seg2:inst19|WideOr2                ; |IRtransceiver|seg2:inst19|WideOr2                ; out0             ;
+; |IRtransceiver|seg2:inst19|WideOr3                ; |IRtransceiver|seg2:inst19|WideOr3                ; out0             ;
+; |IRtransceiver|seg2:inst19|WideOr4                ; |IRtransceiver|seg2:inst19|WideOr4                ; out0             ;
+; |IRtransceiver|seg2:inst19|WideOr5                ; |IRtransceiver|seg2:inst19|WideOr5                ; out0             ;
+; |IRtransceiver|seg2:inst19|WideOr6                ; |IRtransceiver|seg2:inst19|WideOr6                ; out0             ;
+; |IRtransceiver|shift:inst2|nshift~5               ; |IRtransceiver|shift:inst2|nshift~5               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~6               ; |IRtransceiver|shift:inst2|nshift~6               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~7               ; |IRtransceiver|shift:inst2|nshift~7               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~8               ; |IRtransceiver|shift:inst2|nshift~8               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~9               ; |IRtransceiver|shift:inst2|nshift~9               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~10              ; |IRtransceiver|shift:inst2|nshift~10              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~11              ; |IRtransceiver|shift:inst2|nshift~11              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~17              ; |IRtransceiver|shift:inst2|nshift~17              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~18              ; |IRtransceiver|shift:inst2|nshift~18              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~19              ; |IRtransceiver|shift:inst2|nshift~19              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~20              ; |IRtransceiver|shift:inst2|nshift~20              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~21              ; |IRtransceiver|shift:inst2|nshift~21              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~22              ; |IRtransceiver|shift:inst2|nshift~22              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~23              ; |IRtransceiver|shift:inst2|nshift~23              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[6]              ; |IRtransceiver|shift:inst2|nshift[6]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[5]              ; |IRtransceiver|shift:inst2|nshift[5]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[4]              ; |IRtransceiver|shift:inst2|nshift[4]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[3]              ; |IRtransceiver|shift:inst2|nshift[3]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[2]              ; |IRtransceiver|shift:inst2|nshift[2]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[1]              ; |IRtransceiver|shift:inst2|nshift[1]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[0]              ; |IRtransceiver|shift:inst2|nshift[0]              ; out              ;
+; |IRtransceiver|shift:inst2|pshift[0]              ; |IRtransceiver|shift:inst2|pshift[0]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[1]              ; |IRtransceiver|shift:inst2|pshift[1]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[2]              ; |IRtransceiver|shift:inst2|pshift[2]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[3]              ; |IRtransceiver|shift:inst2|pshift[3]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[4]              ; |IRtransceiver|shift:inst2|pshift[4]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[5]              ; |IRtransceiver|shift:inst2|pshift[5]              ; regout           ;
+; |IRtransceiver|bit_counter:inst12|p_cnt[2]        ; |IRtransceiver|bit_counter:inst12|p_cnt[2]        ; regout           ;
+; |IRtransceiver|bit_counter:inst12|p_cnt~1         ; |IRtransceiver|bit_counter:inst12|p_cnt~1         ; out              ;
+; |IRtransceiver|bit_counter:inst12|p_cnt~2         ; |IRtransceiver|bit_counter:inst12|p_cnt~2         ; out              ;
+; |IRtransceiver|bit_counter:inst12|p_cnt~3         ; |IRtransceiver|bit_counter:inst12|p_cnt~3         ; out              ;
+; |IRtransceiver|bit_counter:inst12|p_cnt~4         ; |IRtransceiver|bit_counter:inst12|p_cnt~4         ; out              ;
+; |IRtransceiver|bit_counter:inst12|p_cnt[1]        ; |IRtransceiver|bit_counter:inst12|p_cnt[1]        ; regout           ;
+; |IRtransceiver|bit_counter:inst12|p_cnt[0]        ; |IRtransceiver|bit_counter:inst12|p_cnt[0]        ; regout           ;
+; |IRtransceiver|bit_counter:inst12|n_cnt~0         ; |IRtransceiver|bit_counter:inst12|n_cnt~0         ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt~1         ; |IRtransceiver|bit_counter:inst12|n_cnt~1         ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt~2         ; |IRtransceiver|bit_counter:inst12|n_cnt~2         ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt~3         ; |IRtransceiver|bit_counter:inst12|n_cnt~3         ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt~4         ; |IRtransceiver|bit_counter:inst12|n_cnt~4         ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt[3]        ; |IRtransceiver|bit_counter:inst12|n_cnt[3]        ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt[2]        ; |IRtransceiver|bit_counter:inst12|n_cnt[2]        ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt[1]        ; |IRtransceiver|bit_counter:inst12|n_cnt[1]        ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt[0]        ; |IRtransceiver|bit_counter:inst12|n_cnt[0]        ; out              ;
+; |IRtransceiver|controller:inst|shift~0            ; |IRtransceiver|controller:inst|shift~0            ; out              ;
+; |IRtransceiver|controller:inst|count              ; |IRtransceiver|controller:inst|count              ; out              ;
+; |IRtransceiver|controller:inst|shift              ; |IRtransceiver|controller:inst|shift              ; out              ;
+; |IRtransceiver|controller:inst|p_state~3          ; |IRtransceiver|controller:inst|p_state~3          ; out0             ;
+; |IRtransceiver|controller:inst|p_state~7          ; |IRtransceiver|controller:inst|p_state~7          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|p_count[4]      ; |IRtransceiver|baud_counter:inst4|p_count[4]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[3]      ; |IRtransceiver|baud_counter:inst4|p_count[3]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count~1       ; |IRtransceiver|baud_counter:inst4|p_count~1       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~2       ; |IRtransceiver|baud_counter:inst4|p_count~2       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~3       ; |IRtransceiver|baud_counter:inst4|p_count~3       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~4       ; |IRtransceiver|baud_counter:inst4|p_count~4       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~5       ; |IRtransceiver|baud_counter:inst4|p_count~5       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~6       ; |IRtransceiver|baud_counter:inst4|p_count~6       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~7       ; |IRtransceiver|baud_counter:inst4|p_count~7       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~8       ; |IRtransceiver|baud_counter:inst4|p_count~8       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~9       ; |IRtransceiver|baud_counter:inst4|p_count~9       ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~10      ; |IRtransceiver|baud_counter:inst4|p_count~10      ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count~11      ; |IRtransceiver|baud_counter:inst4|p_count~11      ; out              ;
+; |IRtransceiver|baud_counter:inst4|IR              ; |IRtransceiver|baud_counter:inst4|IR              ; out0             ;
+; |IRtransceiver|baud_counter:inst4|p_count[2]      ; |IRtransceiver|baud_counter:inst4|p_count[2]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[1]      ; |IRtransceiver|baud_counter:inst4|p_count[1]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[0]      ; |IRtransceiver|baud_counter:inst4|p_count[0]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|n_count[10]     ; |IRtransceiver|baud_counter:inst4|n_count[10]     ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[9]      ; |IRtransceiver|baud_counter:inst4|n_count[9]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[8]      ; |IRtransceiver|baud_counter:inst4|n_count[8]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[7]      ; |IRtransceiver|baud_counter:inst4|n_count[7]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[6]      ; |IRtransceiver|baud_counter:inst4|n_count[6]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[5]      ; |IRtransceiver|baud_counter:inst4|n_count[5]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[4]      ; |IRtransceiver|baud_counter:inst4|n_count[4]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[3]      ; |IRtransceiver|baud_counter:inst4|n_count[3]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[2]      ; |IRtransceiver|baud_counter:inst4|n_count[2]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[1]      ; |IRtransceiver|baud_counter:inst4|n_count[1]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[0]      ; |IRtransceiver|baud_counter:inst4|n_count[0]      ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count[5]      ; |IRtransceiver|baud_counter:inst4|p_count[5]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[6]      ; |IRtransceiver|baud_counter:inst4|p_count[6]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[7]      ; |IRtransceiver|baud_counter:inst4|p_count[7]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[8]      ; |IRtransceiver|baud_counter:inst4|p_count[8]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[9]      ; |IRtransceiver|baud_counter:inst4|p_count[9]      ; regout           ;
+; |IRtransceiver|baud_counter:inst4|p_count[10]     ; |IRtransceiver|baud_counter:inst4|p_count[10]     ; regout           ;
+; |IRtransceiver|Inverter:inst3|txd                 ; |IRtransceiver|Inverter:inst3|txd                 ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~0          ; |IRtransceiver|rxd_shift:inst15|nshift~0          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~1          ; |IRtransceiver|rxd_shift:inst15|nshift~1          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~2          ; |IRtransceiver|rxd_shift:inst15|nshift~2          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~3          ; |IRtransceiver|rxd_shift:inst15|nshift~3          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~4          ; |IRtransceiver|rxd_shift:inst15|nshift~4          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~5          ; |IRtransceiver|rxd_shift:inst15|nshift~5          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[9]         ; |IRtransceiver|rxd_shift:inst15|nshift[9]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[8]         ; |IRtransceiver|rxd_shift:inst15|nshift[8]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[7]         ; |IRtransceiver|rxd_shift:inst15|nshift[7]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[6]         ; |IRtransceiver|rxd_shift:inst15|nshift[6]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[5]         ; |IRtransceiver|rxd_shift:inst15|nshift[5]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[4]         ; |IRtransceiver|rxd_shift:inst15|nshift[4]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[3]         ; |IRtransceiver|rxd_shift:inst15|nshift[3]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[2]         ; |IRtransceiver|rxd_shift:inst15|nshift[2]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[1]         ; |IRtransceiver|rxd_shift:inst15|nshift[1]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift[0]         ; |IRtransceiver|rxd_shift:inst15|nshift[0]         ; out              ;
+; |IRtransceiver|rxd_shift:inst15|pshift[4]         ; |IRtransceiver|rxd_shift:inst15|pshift[4]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[5]         ; |IRtransceiver|rxd_shift:inst15|pshift[5]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[6]         ; |IRtransceiver|rxd_shift:inst15|pshift[6]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[7]         ; |IRtransceiver|rxd_shift:inst15|pshift[7]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[8]         ; |IRtransceiver|rxd_shift:inst15|pshift[8]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[9]         ; |IRtransceiver|rxd_shift:inst15|pshift[9]         ; regout           ;
+; |IRtransceiver|counter:inst11|p_cnt[2]            ; |IRtransceiver|counter:inst11|p_cnt[2]            ; regout           ;
+; |IRtransceiver|counter:inst11|p_cnt~1             ; |IRtransceiver|counter:inst11|p_cnt~1             ; out              ;
+; |IRtransceiver|counter:inst11|p_cnt~2             ; |IRtransceiver|counter:inst11|p_cnt~2             ; out              ;
+; |IRtransceiver|counter:inst11|p_cnt~3             ; |IRtransceiver|counter:inst11|p_cnt~3             ; out              ;
+; |IRtransceiver|counter:inst11|p_cnt~4             ; |IRtransceiver|counter:inst11|p_cnt~4             ; out              ;
+; |IRtransceiver|counter:inst11|p_cnt[1]            ; |IRtransceiver|counter:inst11|p_cnt[1]            ; regout           ;
+; |IRtransceiver|counter:inst11|p_cnt[0]            ; |IRtransceiver|counter:inst11|p_cnt[0]            ; regout           ;
+; |IRtransceiver|counter:inst11|n_cnt~0             ; |IRtransceiver|counter:inst11|n_cnt~0             ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt~1             ; |IRtransceiver|counter:inst11|n_cnt~1             ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt~2             ; |IRtransceiver|counter:inst11|n_cnt~2             ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt~3             ; |IRtransceiver|counter:inst11|n_cnt~3             ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt~4             ; |IRtransceiver|counter:inst11|n_cnt~4             ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt[3]            ; |IRtransceiver|counter:inst11|n_cnt[3]            ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt[2]            ; |IRtransceiver|counter:inst11|n_cnt[2]            ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt[1]            ; |IRtransceiver|counter:inst11|n_cnt[1]            ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt[0]            ; |IRtransceiver|counter:inst11|n_cnt[0]            ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count[8]         ; |IRtransceiver|baud_done:inst5|p_count[8]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[7]         ; |IRtransceiver|baud_done:inst5|p_count[7]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count~1          ; |IRtransceiver|baud_done:inst5|p_count~1          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~2          ; |IRtransceiver|baud_done:inst5|p_count~2          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~3          ; |IRtransceiver|baud_done:inst5|p_count~3          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~4          ; |IRtransceiver|baud_done:inst5|p_count~4          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~5          ; |IRtransceiver|baud_done:inst5|p_count~5          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~6          ; |IRtransceiver|baud_done:inst5|p_count~6          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~7          ; |IRtransceiver|baud_done:inst5|p_count~7          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~8          ; |IRtransceiver|baud_done:inst5|p_count~8          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~9          ; |IRtransceiver|baud_done:inst5|p_count~9          ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~10         ; |IRtransceiver|baud_done:inst5|p_count~10         ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count~11         ; |IRtransceiver|baud_done:inst5|p_count~11         ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count[6]         ; |IRtransceiver|baud_done:inst5|p_count[6]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[5]         ; |IRtransceiver|baud_done:inst5|p_count[5]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[4]         ; |IRtransceiver|baud_done:inst5|p_count[4]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[3]         ; |IRtransceiver|baud_done:inst5|p_count[3]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[2]         ; |IRtransceiver|baud_done:inst5|p_count[2]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[1]         ; |IRtransceiver|baud_done:inst5|p_count[1]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[0]         ; |IRtransceiver|baud_done:inst5|p_count[0]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|n_count[10]        ; |IRtransceiver|baud_done:inst5|n_count[10]        ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[9]         ; |IRtransceiver|baud_done:inst5|n_count[9]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[8]         ; |IRtransceiver|baud_done:inst5|n_count[8]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[7]         ; |IRtransceiver|baud_done:inst5|n_count[7]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[6]         ; |IRtransceiver|baud_done:inst5|n_count[6]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[5]         ; |IRtransceiver|baud_done:inst5|n_count[5]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[4]         ; |IRtransceiver|baud_done:inst5|n_count[4]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[3]         ; |IRtransceiver|baud_done:inst5|n_count[3]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[2]         ; |IRtransceiver|baud_done:inst5|n_count[2]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[1]         ; |IRtransceiver|baud_done:inst5|n_count[1]         ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[0]         ; |IRtransceiver|baud_done:inst5|n_count[0]         ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count[9]         ; |IRtransceiver|baud_done:inst5|p_count[9]         ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count[10]        ; |IRtransceiver|baud_done:inst5|p_count[10]        ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|p_state~1     ; |IRtransceiver|rxd_controller:inst6|p_state~1     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_2   ; |IRtransceiver|rxd_controller:inst6|p_state.S_2   ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|n_state~1     ; |IRtransceiver|rxd_controller:inst6|n_state~1     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~2     ; |IRtransceiver|rxd_controller:inst6|n_state~2     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|rxd_shift~0   ; |IRtransceiver|rxd_controller:inst6|rxd_shift~0   ; out              ;
+; |IRtransceiver|rxd_controller:inst6|clear_bit     ; |IRtransceiver|rxd_controller:inst6|clear_bit     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|rxd_count     ; |IRtransceiver|rxd_controller:inst6|rxd_count     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|rxd_shift     ; |IRtransceiver|rxd_controller:inst6|rxd_shift     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|p_state~4     ; |IRtransceiver|rxd_controller:inst6|p_state~4     ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_2~0 ; |IRtransceiver|rxd_controller:inst6|p_state.S_2~0 ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|n_state~13    ; |IRtransceiver|rxd_controller:inst6|n_state~13    ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|p_state~8     ; |IRtransceiver|rxd_controller:inst6|p_state~8     ; out0             ;
+; |IRtransceiver|rxd_parity:inst8|WideXor0          ; |IRtransceiver|rxd_parity:inst8|WideXor0          ; out0             ;
+; |IRtransceiver|rxd_parity:inst8|always0~0         ; |IRtransceiver|rxd_parity:inst8|always0~0         ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector0~0   ; |IRtransceiver|rxd_controller:inst6|Selector0~0   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector0~1   ; |IRtransceiver|rxd_controller:inst6|Selector0~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector0~2   ; |IRtransceiver|rxd_controller:inst6|Selector0~2   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector2~0   ; |IRtransceiver|rxd_controller:inst6|Selector2~0   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector2~2   ; |IRtransceiver|rxd_controller:inst6|Selector2~2   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector2~3   ; |IRtransceiver|rxd_controller:inst6|Selector2~3   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector3~2   ; |IRtransceiver|rxd_controller:inst6|Selector3~2   ; out0             ;
+; |IRtransceiver|seg:inst18|Decoder0~11             ; |IRtransceiver|seg:inst18|Decoder0~11             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~5             ; |IRtransceiver|seg2:inst19|Decoder0~5             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~7             ; |IRtransceiver|seg2:inst19|Decoder0~7             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~10            ; |IRtransceiver|seg2:inst19|Decoder0~10            ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~11            ; |IRtransceiver|seg2:inst19|Decoder0~11            ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~13            ; |IRtransceiver|seg2:inst19|Decoder0~13            ; out              ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~0     ; |IRtransceiver|baud_counter:inst4|LessThan0~0     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~1     ; |IRtransceiver|baud_counter:inst4|LessThan0~1     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~2     ; |IRtransceiver|baud_counter:inst4|LessThan0~2     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~3     ; |IRtransceiver|baud_counter:inst4|LessThan0~3     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~4     ; |IRtransceiver|baud_counter:inst4|LessThan0~4     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~5     ; |IRtransceiver|baud_counter:inst4|LessThan0~5     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~6     ; |IRtransceiver|baud_counter:inst4|LessThan0~6     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~7     ; |IRtransceiver|baud_counter:inst4|LessThan0~7     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~8     ; |IRtransceiver|baud_counter:inst4|LessThan0~8     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~9     ; |IRtransceiver|baud_counter:inst4|LessThan0~9     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~10    ; |IRtransceiver|baud_counter:inst4|LessThan0~10    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~11    ; |IRtransceiver|baud_counter:inst4|LessThan0~11    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~12    ; |IRtransceiver|baud_counter:inst4|LessThan0~12    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~13    ; |IRtransceiver|baud_counter:inst4|LessThan0~13    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan0~14    ; |IRtransceiver|baud_counter:inst4|LessThan0~14    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~0     ; |IRtransceiver|baud_counter:inst4|LessThan1~0     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~1     ; |IRtransceiver|baud_counter:inst4|LessThan1~1     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~2     ; |IRtransceiver|baud_counter:inst4|LessThan1~2     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~3     ; |IRtransceiver|baud_counter:inst4|LessThan1~3     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~4     ; |IRtransceiver|baud_counter:inst4|LessThan1~4     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~5     ; |IRtransceiver|baud_counter:inst4|LessThan1~5     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~6     ; |IRtransceiver|baud_counter:inst4|LessThan1~6     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~7     ; |IRtransceiver|baud_counter:inst4|LessThan1~7     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~8     ; |IRtransceiver|baud_counter:inst4|LessThan1~8     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~9     ; |IRtransceiver|baud_counter:inst4|LessThan1~9     ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~10    ; |IRtransceiver|baud_counter:inst4|LessThan1~10    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~11    ; |IRtransceiver|baud_counter:inst4|LessThan1~11    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~12    ; |IRtransceiver|baud_counter:inst4|LessThan1~12    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~13    ; |IRtransceiver|baud_counter:inst4|LessThan1~13    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~14    ; |IRtransceiver|baud_counter:inst4|LessThan1~14    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~15    ; |IRtransceiver|baud_counter:inst4|LessThan1~15    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~16    ; |IRtransceiver|baud_counter:inst4|LessThan1~16    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~17    ; |IRtransceiver|baud_counter:inst4|LessThan1~17    ; out0             ;
+; |IRtransceiver|baud_counter:inst4|LessThan1~18    ; |IRtransceiver|baud_counter:inst4|LessThan1~18    ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Add0~0          ; |IRtransceiver|bit_counter:inst12|Add0~0          ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Add0~1          ; |IRtransceiver|bit_counter:inst12|Add0~1          ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Add0~2          ; |IRtransceiver|bit_counter:inst12|Add0~2          ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Add0~3          ; |IRtransceiver|bit_counter:inst12|Add0~3          ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Add0~4          ; |IRtransceiver|bit_counter:inst12|Add0~4          ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Add0~5          ; |IRtransceiver|bit_counter:inst12|Add0~5          ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Add0~6          ; |IRtransceiver|bit_counter:inst12|Add0~6          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~0          ; |IRtransceiver|baud_counter:inst4|Add0~0          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~1          ; |IRtransceiver|baud_counter:inst4|Add0~1          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~2          ; |IRtransceiver|baud_counter:inst4|Add0~2          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~3          ; |IRtransceiver|baud_counter:inst4|Add0~3          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~4          ; |IRtransceiver|baud_counter:inst4|Add0~4          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~5          ; |IRtransceiver|baud_counter:inst4|Add0~5          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~6          ; |IRtransceiver|baud_counter:inst4|Add0~6          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~7          ; |IRtransceiver|baud_counter:inst4|Add0~7          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~8          ; |IRtransceiver|baud_counter:inst4|Add0~8          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~9          ; |IRtransceiver|baud_counter:inst4|Add0~9          ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~10         ; |IRtransceiver|baud_counter:inst4|Add0~10         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~11         ; |IRtransceiver|baud_counter:inst4|Add0~11         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~12         ; |IRtransceiver|baud_counter:inst4|Add0~12         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~13         ; |IRtransceiver|baud_counter:inst4|Add0~13         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~14         ; |IRtransceiver|baud_counter:inst4|Add0~14         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~15         ; |IRtransceiver|baud_counter:inst4|Add0~15         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~16         ; |IRtransceiver|baud_counter:inst4|Add0~16         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~17         ; |IRtransceiver|baud_counter:inst4|Add0~17         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~18         ; |IRtransceiver|baud_counter:inst4|Add0~18         ; out0             ;
+; |IRtransceiver|counter:inst11|Add0~0              ; |IRtransceiver|counter:inst11|Add0~0              ; out0             ;
+; |IRtransceiver|counter:inst11|Add0~1              ; |IRtransceiver|counter:inst11|Add0~1              ; out0             ;
+; |IRtransceiver|counter:inst11|Add0~2              ; |IRtransceiver|counter:inst11|Add0~2              ; out0             ;
+; |IRtransceiver|counter:inst11|Add0~3              ; |IRtransceiver|counter:inst11|Add0~3              ; out0             ;
+; |IRtransceiver|counter:inst11|Add0~4              ; |IRtransceiver|counter:inst11|Add0~4              ; out0             ;
+; |IRtransceiver|counter:inst11|Add0~5              ; |IRtransceiver|counter:inst11|Add0~5              ; out0             ;
+; |IRtransceiver|counter:inst11|Add0~6              ; |IRtransceiver|counter:inst11|Add0~6              ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~0             ; |IRtransceiver|baud_done:inst5|Add0~0             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~1             ; |IRtransceiver|baud_done:inst5|Add0~1             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~2             ; |IRtransceiver|baud_done:inst5|Add0~2             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~3             ; |IRtransceiver|baud_done:inst5|Add0~3             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~4             ; |IRtransceiver|baud_done:inst5|Add0~4             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~5             ; |IRtransceiver|baud_done:inst5|Add0~5             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~6             ; |IRtransceiver|baud_done:inst5|Add0~6             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~7             ; |IRtransceiver|baud_done:inst5|Add0~7             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~8             ; |IRtransceiver|baud_done:inst5|Add0~8             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~9             ; |IRtransceiver|baud_done:inst5|Add0~9             ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~10            ; |IRtransceiver|baud_done:inst5|Add0~10            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~11            ; |IRtransceiver|baud_done:inst5|Add0~11            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~12            ; |IRtransceiver|baud_done:inst5|Add0~12            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~13            ; |IRtransceiver|baud_done:inst5|Add0~13            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~14            ; |IRtransceiver|baud_done:inst5|Add0~14            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~15            ; |IRtransceiver|baud_done:inst5|Add0~15            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~16            ; |IRtransceiver|baud_done:inst5|Add0~16            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~17            ; |IRtransceiver|baud_done:inst5|Add0~17            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~18            ; |IRtransceiver|baud_done:inst5|Add0~18            ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Equal0~0        ; |IRtransceiver|baud_counter:inst4|Equal0~0        ; out0             ;
+; |IRtransceiver|baud_done:inst5|Equal0~0           ; |IRtransceiver|baud_done:inst5|Equal0~0           ; out0             ;
+; |IRtransceiver|baud_done:inst5|Equal1~0           ; |IRtransceiver|baud_done:inst5|Equal1~0           ; out0             ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                 ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; Node Name                                         ; Output Port Name                                  ; Output Port Type ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; |IRtransceiver|parity_error                       ; |IRtransceiver|parity_error                       ; pin_out          ;
+; |IRtransceiver|reset                              ; |IRtransceiver|reset                              ; out              ;
+; |IRtransceiver|framing_error                      ; |IRtransceiver|framing_error                      ; pin_out          ;
+; |IRtransceiver|send                               ; |IRtransceiver|send                               ; out              ;
+; |IRtransceiver|Input[7]                           ; |IRtransceiver|Input[7]                           ; out              ;
+; |IRtransceiver|Input[6]                           ; |IRtransceiver|Input[6]                           ; out              ;
+; |IRtransceiver|Input[5]                           ; |IRtransceiver|Input[5]                           ; out              ;
+; |IRtransceiver|Input[4]                           ; |IRtransceiver|Input[4]                           ; out              ;
+; |IRtransceiver|Input[3]                           ; |IRtransceiver|Input[3]                           ; out              ;
+; |IRtransceiver|Input[2]                           ; |IRtransceiver|Input[2]                           ; out              ;
+; |IRtransceiver|Input[1]                           ; |IRtransceiver|Input[1]                           ; out              ;
+; |IRtransceiver|Input[0]                           ; |IRtransceiver|Input[0]                           ; out              ;
+; |IRtransceiver|output[0]                          ; |IRtransceiver|output[0]                          ; pin_out          ;
+; |IRtransceiver|parity[11]                         ; |IRtransceiver|parity[11]                         ; pin_out          ;
+; |IRtransceiver|parity[10]                         ; |IRtransceiver|parity[10]                         ; pin_out          ;
+; |IRtransceiver|parity[9]                          ; |IRtransceiver|parity[9]                          ; pin_out          ;
+; |IRtransceiver|parity[8]                          ; |IRtransceiver|parity[8]                          ; pin_out          ;
+; |IRtransceiver|parity[7]                          ; |IRtransceiver|parity[7]                          ; pin_out          ;
+; |IRtransceiver|parity[6]                          ; |IRtransceiver|parity[6]                          ; pin_out          ;
+; |IRtransceiver|parity[5]                          ; |IRtransceiver|parity[5]                          ; pin_out          ;
+; |IRtransceiver|parity[4]                          ; |IRtransceiver|parity[4]                          ; pin_out          ;
+; |IRtransceiver|parity[3]                          ; |IRtransceiver|parity[3]                          ; pin_out          ;
+; |IRtransceiver|parity[2]                          ; |IRtransceiver|parity[2]                          ; pin_out          ;
+; |IRtransceiver|parity[1]                          ; |IRtransceiver|parity[1]                          ; pin_out          ;
+; |IRtransceiver|parity[0]                          ; |IRtransceiver|parity[0]                          ; pin_out          ;
+; |IRtransceiver|segR[5]                            ; |IRtransceiver|segR[5]                            ; pin_out          ;
+; |IRtransceiver|segR[4]                            ; |IRtransceiver|segR[4]                            ; pin_out          ;
+; |IRtransceiver|segR[3]                            ; |IRtransceiver|segR[3]                            ; pin_out          ;
+; |IRtransceiver|segR[0]                            ; |IRtransceiver|segR[0]                            ; pin_out          ;
+; |IRtransceiver|seg:inst18|WideOr1                 ; |IRtransceiver|seg:inst18|WideOr1                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr2                 ; |IRtransceiver|seg:inst18|WideOr2                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr3                 ; |IRtransceiver|seg:inst18|WideOr3                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr6                 ; |IRtransceiver|seg:inst18|WideOr6                 ; out0             ;
+; |IRtransceiver|parity:inst1|WideXor0              ; |IRtransceiver|parity:inst1|WideXor0              ; out0             ;
+; |IRtransceiver|shift:inst2|nshift~12              ; |IRtransceiver|shift:inst2|nshift~12              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~13              ; |IRtransceiver|shift:inst2|nshift~13              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~14              ; |IRtransceiver|shift:inst2|nshift~14              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~15              ; |IRtransceiver|shift:inst2|nshift~15              ; out              ;
+; |IRtransceiver|bit_counter:inst12|p_cnt~0         ; |IRtransceiver|bit_counter:inst12|p_cnt~0         ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt[4]        ; |IRtransceiver|bit_counter:inst12|n_cnt[4]        ; out              ;
+; |IRtransceiver|bit_counter:inst12|p_cnt[4]        ; |IRtransceiver|bit_counter:inst12|p_cnt[4]        ; regout           ;
+; |IRtransceiver|controller:inst|p_state~0          ; |IRtransceiver|controller:inst|p_state~0          ; out              ;
+; |IRtransceiver|controller:inst|p_state~2          ; |IRtransceiver|controller:inst|p_state~2          ; out              ;
+; |IRtransceiver|controller:inst|n_state~0          ; |IRtransceiver|controller:inst|n_state~0          ; out              ;
+; |IRtransceiver|controller:inst|n_state~2          ; |IRtransceiver|controller:inst|n_state~2          ; out              ;
+; |IRtransceiver|controller:inst|n_state~3          ; |IRtransceiver|controller:inst|n_state~3          ; out              ;
+; |IRtransceiver|controller:inst|n_state~4          ; |IRtransceiver|controller:inst|n_state~4          ; out              ;
+; |IRtransceiver|controller:inst|n_state~5          ; |IRtransceiver|controller:inst|n_state~5          ; out              ;
+; |IRtransceiver|controller:inst|p_state.S_1        ; |IRtransceiver|controller:inst|p_state.S_1        ; regout           ;
+; |IRtransceiver|controller:inst|clear_bit          ; |IRtransceiver|controller:inst|clear_bit          ; out              ;
+; |IRtransceiver|controller:inst|load_shift         ; |IRtransceiver|controller:inst|load_shift         ; out              ;
+; |IRtransceiver|controller:inst|p_state.S_3        ; |IRtransceiver|controller:inst|p_state.S_3        ; regout           ;
+; |IRtransceiver|controller:inst|reset_baud         ; |IRtransceiver|controller:inst|reset_baud         ; out              ;
+; |IRtransceiver|controller:inst|p_state.S_1~0      ; |IRtransceiver|controller:inst|p_state.S_1~0      ; out0             ;
+; |IRtransceiver|controller:inst|n_state~7          ; |IRtransceiver|controller:inst|n_state~7          ; out0             ;
+; |IRtransceiver|controller:inst|p_state.S_3~0      ; |IRtransceiver|controller:inst|p_state.S_3~0      ; out0             ;
+; |IRtransceiver|controller:inst|n_state~11         ; |IRtransceiver|controller:inst|n_state~11         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|p_count~0       ; |IRtransceiver|baud_counter:inst4|p_count~0       ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[11]     ; |IRtransceiver|baud_counter:inst4|n_count[11]     ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count[11]     ; |IRtransceiver|baud_counter:inst4|p_count[11]     ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|nshift~9          ; |IRtransceiver|rxd_shift:inst15|nshift~9          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|pshift[0]         ; |IRtransceiver|rxd_shift:inst15|pshift[0]         ; regout           ;
+; |IRtransceiver|counter:inst11|p_cnt~0             ; |IRtransceiver|counter:inst11|p_cnt~0             ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt[4]            ; |IRtransceiver|counter:inst11|n_cnt[4]            ; out              ;
+; |IRtransceiver|counter:inst11|p_cnt[4]            ; |IRtransceiver|counter:inst11|p_cnt[4]            ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count~0          ; |IRtransceiver|baud_done:inst5|p_count~0          ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[11]        ; |IRtransceiver|baud_done:inst5|n_count[11]        ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count[11]        ; |IRtransceiver|baud_done:inst5|p_count[11]        ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|p_state~0     ; |IRtransceiver|rxd_controller:inst6|p_state~0     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|p_state~3     ; |IRtransceiver|rxd_controller:inst6|p_state~3     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_1   ; |IRtransceiver|rxd_controller:inst6|p_state.S_1   ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|n_state~0     ; |IRtransceiver|rxd_controller:inst6|n_state~0     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~4     ; |IRtransceiver|rxd_controller:inst6|n_state~4     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~5     ; |IRtransceiver|rxd_controller:inst6|n_state~5     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~6     ; |IRtransceiver|rxd_controller:inst6|n_state~6     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~7     ; |IRtransceiver|rxd_controller:inst6|n_state~7     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_4   ; |IRtransceiver|rxd_controller:inst6|p_state.S_4   ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_1~0 ; |IRtransceiver|rxd_controller:inst6|p_state.S_1~0 ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|n_state~11    ; |IRtransceiver|rxd_controller:inst6|n_state~11    ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_4~0 ; |IRtransceiver|rxd_controller:inst6|p_state.S_4~0 ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|parity_check  ; |IRtransceiver|rxd_controller:inst6|parity_check  ; out0             ;
+; |IRtransceiver|rxd_parity:inst8|framing_error     ; |IRtransceiver|rxd_parity:inst8|framing_error     ; out              ;
+; |IRtransceiver|rxd_parity:inst8|parity_error      ; |IRtransceiver|rxd_parity:inst8|parity_error      ; out              ;
+; |IRtransceiver|controller:inst|Selector0~0        ; |IRtransceiver|controller:inst|Selector0~0        ; out              ;
+; |IRtransceiver|controller:inst|Selector1~0        ; |IRtransceiver|controller:inst|Selector1~0        ; out0             ;
+; |IRtransceiver|controller:inst|Selector1~2        ; |IRtransceiver|controller:inst|Selector1~2        ; out0             ;
+; |IRtransceiver|controller:inst|Selector2~0        ; |IRtransceiver|controller:inst|Selector2~0        ; out0             ;
+; |IRtransceiver|controller:inst|Selector2~1        ; |IRtransceiver|controller:inst|Selector2~1        ; out0             ;
+; |IRtransceiver|controller:inst|Selector2~2        ; |IRtransceiver|controller:inst|Selector2~2        ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector1~0   ; |IRtransceiver|rxd_controller:inst6|Selector1~0   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector1~1   ; |IRtransceiver|rxd_controller:inst6|Selector1~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector1~2   ; |IRtransceiver|rxd_controller:inst6|Selector1~2   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector1~3   ; |IRtransceiver|rxd_controller:inst6|Selector1~3   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector2~1   ; |IRtransceiver|rxd_controller:inst6|Selector2~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector4~0   ; |IRtransceiver|rxd_controller:inst6|Selector4~0   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector4~1   ; |IRtransceiver|rxd_controller:inst6|Selector4~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector4~2   ; |IRtransceiver|rxd_controller:inst6|Selector4~2   ; out0             ;
+; |IRtransceiver|seg:inst18|Decoder0~0              ; |IRtransceiver|seg:inst18|Decoder0~0              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~1              ; |IRtransceiver|seg:inst18|Decoder0~1              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~2              ; |IRtransceiver|seg:inst18|Decoder0~2              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~3              ; |IRtransceiver|seg:inst18|Decoder0~3              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~4              ; |IRtransceiver|seg:inst18|Decoder0~4              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~5              ; |IRtransceiver|seg:inst18|Decoder0~5              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~6              ; |IRtransceiver|seg:inst18|Decoder0~6              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~7              ; |IRtransceiver|seg:inst18|Decoder0~7              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~8              ; |IRtransceiver|seg:inst18|Decoder0~8              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~9              ; |IRtransceiver|seg:inst18|Decoder0~9              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~10             ; |IRtransceiver|seg:inst18|Decoder0~10             ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~12             ; |IRtransceiver|seg:inst18|Decoder0~12             ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~14             ; |IRtransceiver|seg:inst18|Decoder0~14             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~0             ; |IRtransceiver|seg2:inst19|Decoder0~0             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~1             ; |IRtransceiver|seg2:inst19|Decoder0~1             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~3             ; |IRtransceiver|seg2:inst19|Decoder0~3             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~4             ; |IRtransceiver|seg2:inst19|Decoder0~4             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~6             ; |IRtransceiver|seg2:inst19|Decoder0~6             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~8             ; |IRtransceiver|seg2:inst19|Decoder0~8             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~9             ; |IRtransceiver|seg2:inst19|Decoder0~9             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~12            ; |IRtransceiver|seg2:inst19|Decoder0~12            ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~14            ; |IRtransceiver|seg2:inst19|Decoder0~14            ; out              ;
+; |IRtransceiver|baud_counter:inst4|Add0~19         ; |IRtransceiver|baud_counter:inst4|Add0~19         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~20         ; |IRtransceiver|baud_counter:inst4|Add0~20         ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~19            ; |IRtransceiver|baud_done:inst5|Add0~19            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~20            ; |IRtransceiver|baud_done:inst5|Add0~20            ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Equal0~0        ; |IRtransceiver|bit_counter:inst12|Equal0~0        ; out0             ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                 ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; Node Name                                         ; Output Port Name                                  ; Output Port Type ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; |IRtransceiver|parity_error                       ; |IRtransceiver|parity_error                       ; pin_out          ;
+; |IRtransceiver|framing_error                      ; |IRtransceiver|framing_error                      ; pin_out          ;
+; |IRtransceiver|Input[7]                           ; |IRtransceiver|Input[7]                           ; out              ;
+; |IRtransceiver|Input[6]                           ; |IRtransceiver|Input[6]                           ; out              ;
+; |IRtransceiver|Input[5]                           ; |IRtransceiver|Input[5]                           ; out              ;
+; |IRtransceiver|Input[4]                           ; |IRtransceiver|Input[4]                           ; out              ;
+; |IRtransceiver|Input[3]                           ; |IRtransceiver|Input[3]                           ; out              ;
+; |IRtransceiver|Input[2]                           ; |IRtransceiver|Input[2]                           ; out              ;
+; |IRtransceiver|Input[1]                           ; |IRtransceiver|Input[1]                           ; out              ;
+; |IRtransceiver|Input[0]                           ; |IRtransceiver|Input[0]                           ; out              ;
+; |IRtransceiver|output[3]                          ; |IRtransceiver|output[3]                          ; pin_out          ;
+; |IRtransceiver|output[2]                          ; |IRtransceiver|output[2]                          ; pin_out          ;
+; |IRtransceiver|output[1]                          ; |IRtransceiver|output[1]                          ; pin_out          ;
+; |IRtransceiver|output[0]                          ; |IRtransceiver|output[0]                          ; pin_out          ;
+; |IRtransceiver|parity[11]                         ; |IRtransceiver|parity[11]                         ; pin_out          ;
+; |IRtransceiver|parity[10]                         ; |IRtransceiver|parity[10]                         ; pin_out          ;
+; |IRtransceiver|parity[9]                          ; |IRtransceiver|parity[9]                          ; pin_out          ;
+; |IRtransceiver|parity[8]                          ; |IRtransceiver|parity[8]                          ; pin_out          ;
+; |IRtransceiver|parity[7]                          ; |IRtransceiver|parity[7]                          ; pin_out          ;
+; |IRtransceiver|parity[6]                          ; |IRtransceiver|parity[6]                          ; pin_out          ;
+; |IRtransceiver|parity[5]                          ; |IRtransceiver|parity[5]                          ; pin_out          ;
+; |IRtransceiver|parity[4]                          ; |IRtransceiver|parity[4]                          ; pin_out          ;
+; |IRtransceiver|parity[3]                          ; |IRtransceiver|parity[3]                          ; pin_out          ;
+; |IRtransceiver|parity[2]                          ; |IRtransceiver|parity[2]                          ; pin_out          ;
+; |IRtransceiver|parity[1]                          ; |IRtransceiver|parity[1]                          ; pin_out          ;
+; |IRtransceiver|parity[0]                          ; |IRtransceiver|parity[0]                          ; pin_out          ;
+; |IRtransceiver|segR[5]                            ; |IRtransceiver|segR[5]                            ; pin_out          ;
+; |IRtransceiver|segR[4]                            ; |IRtransceiver|segR[4]                            ; pin_out          ;
+; |IRtransceiver|segR[3]                            ; |IRtransceiver|segR[3]                            ; pin_out          ;
+; |IRtransceiver|segR[2]                            ; |IRtransceiver|segR[2]                            ; pin_out          ;
+; |IRtransceiver|segR[1]                            ; |IRtransceiver|segR[1]                            ; pin_out          ;
+; |IRtransceiver|segR[0]                            ; |IRtransceiver|segR[0]                            ; pin_out          ;
+; |IRtransceiver|seg:inst18|WideOr1                 ; |IRtransceiver|seg:inst18|WideOr1                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr2                 ; |IRtransceiver|seg:inst18|WideOr2                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr3                 ; |IRtransceiver|seg:inst18|WideOr3                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr4                 ; |IRtransceiver|seg:inst18|WideOr4                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr5                 ; |IRtransceiver|seg:inst18|WideOr5                 ; out0             ;
+; |IRtransceiver|seg:inst18|WideOr6                 ; |IRtransceiver|seg:inst18|WideOr6                 ; out0             ;
+; |IRtransceiver|parity:inst1|WideXor0              ; |IRtransceiver|parity:inst1|WideXor0              ; out0             ;
+; |IRtransceiver|shift:inst2|nshift~0               ; |IRtransceiver|shift:inst2|nshift~0               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~1               ; |IRtransceiver|shift:inst2|nshift~1               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~2               ; |IRtransceiver|shift:inst2|nshift~2               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~3               ; |IRtransceiver|shift:inst2|nshift~3               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~4               ; |IRtransceiver|shift:inst2|nshift~4               ; out              ;
+; |IRtransceiver|shift:inst2|nshift~12              ; |IRtransceiver|shift:inst2|nshift~12              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~13              ; |IRtransceiver|shift:inst2|nshift~13              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~14              ; |IRtransceiver|shift:inst2|nshift~14              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~15              ; |IRtransceiver|shift:inst2|nshift~15              ; out              ;
+; |IRtransceiver|shift:inst2|nshift~16              ; |IRtransceiver|shift:inst2|nshift~16              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[11]             ; |IRtransceiver|shift:inst2|nshift[11]             ; out              ;
+; |IRtransceiver|shift:inst2|nshift[10]             ; |IRtransceiver|shift:inst2|nshift[10]             ; out              ;
+; |IRtransceiver|shift:inst2|nshift[9]              ; |IRtransceiver|shift:inst2|nshift[9]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[8]              ; |IRtransceiver|shift:inst2|nshift[8]              ; out              ;
+; |IRtransceiver|shift:inst2|nshift[7]              ; |IRtransceiver|shift:inst2|nshift[7]              ; out              ;
+; |IRtransceiver|shift:inst2|pshift[6]              ; |IRtransceiver|shift:inst2|pshift[6]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[7]              ; |IRtransceiver|shift:inst2|pshift[7]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[8]              ; |IRtransceiver|shift:inst2|pshift[8]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[9]              ; |IRtransceiver|shift:inst2|pshift[9]              ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[10]             ; |IRtransceiver|shift:inst2|pshift[10]             ; regout           ;
+; |IRtransceiver|shift:inst2|pshift[11]             ; |IRtransceiver|shift:inst2|pshift[11]             ; regout           ;
+; |IRtransceiver|bit_counter:inst12|p_cnt[3]        ; |IRtransceiver|bit_counter:inst12|p_cnt[3]        ; regout           ;
+; |IRtransceiver|bit_counter:inst12|p_cnt~0         ; |IRtransceiver|bit_counter:inst12|p_cnt~0         ; out              ;
+; |IRtransceiver|bit_counter:inst12|n_cnt[4]        ; |IRtransceiver|bit_counter:inst12|n_cnt[4]        ; out              ;
+; |IRtransceiver|bit_counter:inst12|p_cnt[4]        ; |IRtransceiver|bit_counter:inst12|p_cnt[4]        ; regout           ;
+; |IRtransceiver|controller:inst|p_state~1          ; |IRtransceiver|controller:inst|p_state~1          ; out              ;
+; |IRtransceiver|controller:inst|p_state~2          ; |IRtransceiver|controller:inst|p_state~2          ; out              ;
+; |IRtransceiver|controller:inst|n_state~1          ; |IRtransceiver|controller:inst|n_state~1          ; out              ;
+; |IRtransceiver|controller:inst|n_state~2          ; |IRtransceiver|controller:inst|n_state~2          ; out              ;
+; |IRtransceiver|controller:inst|n_state~3          ; |IRtransceiver|controller:inst|n_state~3          ; out              ;
+; |IRtransceiver|controller:inst|n_state~4          ; |IRtransceiver|controller:inst|n_state~4          ; out              ;
+; |IRtransceiver|controller:inst|n_state~5          ; |IRtransceiver|controller:inst|n_state~5          ; out              ;
+; |IRtransceiver|controller:inst|p_state.S_2        ; |IRtransceiver|controller:inst|p_state.S_2        ; regout           ;
+; |IRtransceiver|controller:inst|p_state.S_3        ; |IRtransceiver|controller:inst|p_state.S_3        ; regout           ;
+; |IRtransceiver|controller:inst|p_state.S_2~0      ; |IRtransceiver|controller:inst|p_state.S_2~0      ; out0             ;
+; |IRtransceiver|controller:inst|n_state~9          ; |IRtransceiver|controller:inst|n_state~9          ; out0             ;
+; |IRtransceiver|controller:inst|p_state.S_3~0      ; |IRtransceiver|controller:inst|p_state.S_3~0      ; out0             ;
+; |IRtransceiver|controller:inst|n_state~11         ; |IRtransceiver|controller:inst|n_state~11         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|p_count~0       ; |IRtransceiver|baud_counter:inst4|p_count~0       ; out              ;
+; |IRtransceiver|baud_counter:inst4|n_count[11]     ; |IRtransceiver|baud_counter:inst4|n_count[11]     ; out              ;
+; |IRtransceiver|baud_counter:inst4|p_count[11]     ; |IRtransceiver|baud_counter:inst4|p_count[11]     ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|nshift~6          ; |IRtransceiver|rxd_shift:inst15|nshift~6          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~7          ; |IRtransceiver|rxd_shift:inst15|nshift~7          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~8          ; |IRtransceiver|rxd_shift:inst15|nshift~8          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|nshift~9          ; |IRtransceiver|rxd_shift:inst15|nshift~9          ; out              ;
+; |IRtransceiver|rxd_shift:inst15|pshift[0]         ; |IRtransceiver|rxd_shift:inst15|pshift[0]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[1]         ; |IRtransceiver|rxd_shift:inst15|pshift[1]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[2]         ; |IRtransceiver|rxd_shift:inst15|pshift[2]         ; regout           ;
+; |IRtransceiver|rxd_shift:inst15|pshift[3]         ; |IRtransceiver|rxd_shift:inst15|pshift[3]         ; regout           ;
+; |IRtransceiver|counter:inst11|p_cnt[3]            ; |IRtransceiver|counter:inst11|p_cnt[3]            ; regout           ;
+; |IRtransceiver|counter:inst11|p_cnt~0             ; |IRtransceiver|counter:inst11|p_cnt~0             ; out              ;
+; |IRtransceiver|counter:inst11|n_cnt[4]            ; |IRtransceiver|counter:inst11|n_cnt[4]            ; out              ;
+; |IRtransceiver|counter:inst11|p_cnt[4]            ; |IRtransceiver|counter:inst11|p_cnt[4]            ; regout           ;
+; |IRtransceiver|baud_done:inst5|p_count~0          ; |IRtransceiver|baud_done:inst5|p_count~0          ; out              ;
+; |IRtransceiver|baud_done:inst5|n_count[11]        ; |IRtransceiver|baud_done:inst5|n_count[11]        ; out              ;
+; |IRtransceiver|baud_done:inst5|p_count[11]        ; |IRtransceiver|baud_done:inst5|p_count[11]        ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|p_state~2     ; |IRtransceiver|rxd_controller:inst6|p_state~2     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|p_state~3     ; |IRtransceiver|rxd_controller:inst6|p_state~3     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~3     ; |IRtransceiver|rxd_controller:inst6|n_state~3     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~4     ; |IRtransceiver|rxd_controller:inst6|n_state~4     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~5     ; |IRtransceiver|rxd_controller:inst6|n_state~5     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~6     ; |IRtransceiver|rxd_controller:inst6|n_state~6     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|n_state~7     ; |IRtransceiver|rxd_controller:inst6|n_state~7     ; out              ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_3   ; |IRtransceiver|rxd_controller:inst6|p_state.S_3   ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_4   ; |IRtransceiver|rxd_controller:inst6|p_state.S_4   ; regout           ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_3~0 ; |IRtransceiver|rxd_controller:inst6|p_state.S_3~0 ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|n_state~15    ; |IRtransceiver|rxd_controller:inst6|n_state~15    ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|p_state.S_4~0 ; |IRtransceiver|rxd_controller:inst6|p_state.S_4~0 ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|parity_check  ; |IRtransceiver|rxd_controller:inst6|parity_check  ; out0             ;
+; |IRtransceiver|rxd_parity:inst8|framing_error     ; |IRtransceiver|rxd_parity:inst8|framing_error     ; out              ;
+; |IRtransceiver|rxd_parity:inst8|parity_error      ; |IRtransceiver|rxd_parity:inst8|parity_error      ; out              ;
+; |IRtransceiver|controller:inst|Selector0~0        ; |IRtransceiver|controller:inst|Selector0~0        ; out              ;
+; |IRtransceiver|controller:inst|Selector1~0        ; |IRtransceiver|controller:inst|Selector1~0        ; out0             ;
+; |IRtransceiver|controller:inst|Selector1~1        ; |IRtransceiver|controller:inst|Selector1~1        ; out0             ;
+; |IRtransceiver|controller:inst|Selector2~0        ; |IRtransceiver|controller:inst|Selector2~0        ; out0             ;
+; |IRtransceiver|controller:inst|Selector2~1        ; |IRtransceiver|controller:inst|Selector2~1        ; out0             ;
+; |IRtransceiver|controller:inst|Selector2~2        ; |IRtransceiver|controller:inst|Selector2~2        ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector1~1   ; |IRtransceiver|rxd_controller:inst6|Selector1~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector1~2   ; |IRtransceiver|rxd_controller:inst6|Selector1~2   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector2~1   ; |IRtransceiver|rxd_controller:inst6|Selector2~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector3~0   ; |IRtransceiver|rxd_controller:inst6|Selector3~0   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector3~1   ; |IRtransceiver|rxd_controller:inst6|Selector3~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector4~0   ; |IRtransceiver|rxd_controller:inst6|Selector4~0   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector4~1   ; |IRtransceiver|rxd_controller:inst6|Selector4~1   ; out0             ;
+; |IRtransceiver|rxd_controller:inst6|Selector4~2   ; |IRtransceiver|rxd_controller:inst6|Selector4~2   ; out0             ;
+; |IRtransceiver|seg:inst18|Decoder0~1              ; |IRtransceiver|seg:inst18|Decoder0~1              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~2              ; |IRtransceiver|seg:inst18|Decoder0~2              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~3              ; |IRtransceiver|seg:inst18|Decoder0~3              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~4              ; |IRtransceiver|seg:inst18|Decoder0~4              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~5              ; |IRtransceiver|seg:inst18|Decoder0~5              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~6              ; |IRtransceiver|seg:inst18|Decoder0~6              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~7              ; |IRtransceiver|seg:inst18|Decoder0~7              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~8              ; |IRtransceiver|seg:inst18|Decoder0~8              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~9              ; |IRtransceiver|seg:inst18|Decoder0~9              ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~10             ; |IRtransceiver|seg:inst18|Decoder0~10             ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~12             ; |IRtransceiver|seg:inst18|Decoder0~12             ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~13             ; |IRtransceiver|seg:inst18|Decoder0~13             ; out              ;
+; |IRtransceiver|seg:inst18|Decoder0~14             ; |IRtransceiver|seg:inst18|Decoder0~14             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~1             ; |IRtransceiver|seg2:inst19|Decoder0~1             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~2             ; |IRtransceiver|seg2:inst19|Decoder0~2             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~3             ; |IRtransceiver|seg2:inst19|Decoder0~3             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~4             ; |IRtransceiver|seg2:inst19|Decoder0~4             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~6             ; |IRtransceiver|seg2:inst19|Decoder0~6             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~8             ; |IRtransceiver|seg2:inst19|Decoder0~8             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~9             ; |IRtransceiver|seg2:inst19|Decoder0~9             ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~12            ; |IRtransceiver|seg2:inst19|Decoder0~12            ; out              ;
+; |IRtransceiver|seg2:inst19|Decoder0~14            ; |IRtransceiver|seg2:inst19|Decoder0~14            ; out              ;
+; |IRtransceiver|baud_counter:inst4|Add0~19         ; |IRtransceiver|baud_counter:inst4|Add0~19         ; out0             ;
+; |IRtransceiver|baud_counter:inst4|Add0~20         ; |IRtransceiver|baud_counter:inst4|Add0~20         ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~19            ; |IRtransceiver|baud_done:inst5|Add0~19            ; out0             ;
+; |IRtransceiver|baud_done:inst5|Add0~20            ; |IRtransceiver|baud_done:inst5|Add0~20            ; out0             ;
+; |IRtransceiver|bit_counter:inst12|Equal0~0        ; |IRtransceiver|bit_counter:inst12|Equal0~0        ; out0             ;
+; |IRtransceiver|counter:inst11|Equal0~0            ; |IRtransceiver|counter:inst11|Equal0~0            ; out0             ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Dec 10 19:37:23 2015
+Info: Command: quartus_sim --simulation_results_format=VWF IRtransceiver -c IRtransceiver
+Info (324025): Using vector source file "H:/Liverpool/ELEC373/IRDA/IRtransceiver/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      63.48 %
+Info (328052): Number of transitions in simulation is 710173
+Info (324045): Vector file IRtransceiver.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info (292036): Thank you for using the Quartus II software 30-day evaluation. You have 10 days left (until Dec 20, 2015) before compilation and simulation support is disabled.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 345 megabytes
+    Info: Processing ended: Thu Dec 10 19:37:24 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

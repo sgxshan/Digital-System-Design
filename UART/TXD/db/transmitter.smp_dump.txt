@@ -1,0 +1,5 @@
+
+State Machine - |transmitter|controller:inst|p_state
+Name p_state.Q 
+p_state.P 0 
+p_state.Q 1 

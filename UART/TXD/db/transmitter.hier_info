@@ -1,0 +1,183 @@
+|transmitter
+TXD <= shift:inst8.lastbit
+Clk => shift:inst8.clk
+Clk => controller:inst.clk
+Clk => baud_counter:inst2.clk
+Clk => bit_counter:inst3.clk
+Send => controller:inst.send
+Reset => controller:inst.reset
+Reset => shift:inst8.reset
+Data[0] => parity:inst5.data_in[0]
+Data[1] => parity:inst5.data_in[1]
+Data[2] => parity:inst5.data_in[2]
+Data[3] => parity:inst5.data_in[3]
+Data[4] => parity:inst5.data_in[4]
+Data[5] => parity:inst5.data_in[5]
+Data[6] => parity:inst5.data_in[6]
+Data[7] => parity:inst5.data_in[7]
+
+
+|transmitter|shift:inst8
+clk => pshift[0].CLK
+clk => pshift[1].CLK
+clk => pshift[2].CLK
+clk => pshift[3].CLK
+clk => pshift[4].CLK
+clk => pshift[5].CLK
+clk => pshift[6].CLK
+clk => pshift[7].CLK
+clk => pshift[8].CLK
+clk => pshift[9].CLK
+clk => pshift[10].CLK
+clk => pshift[11].CLK
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+load => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+shift => nshift.OUTPUTSELECT
+dat[0] => nshift.DATAB
+dat[1] => nshift.DATAB
+dat[2] => nshift.DATAB
+dat[3] => nshift.DATAB
+dat[4] => nshift.DATAB
+dat[5] => nshift.DATAB
+dat[6] => nshift.DATAB
+dat[7] => nshift.DATAB
+dat[8] => nshift.DATAB
+dat[9] => nshift.DATAB
+dat[10] => nshift.DATAB
+dat[11] => nshift.DATAB
+reset => nshift[11].OUTPUTSELECT
+reset => nshift[10].OUTPUTSELECT
+reset => nshift[9].OUTPUTSELECT
+reset => nshift[8].OUTPUTSELECT
+reset => nshift[7].OUTPUTSELECT
+reset => nshift[6].OUTPUTSELECT
+reset => nshift[5].OUTPUTSELECT
+reset => nshift[4].OUTPUTSELECT
+reset => nshift[3].OUTPUTSELECT
+reset => nshift[2].OUTPUTSELECT
+reset => nshift[1].OUTPUTSELECT
+reset => nshift[0].OUTPUTSELECT
+lastbit <= pshift[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|transmitter|controller:inst
+send => clear_bit.DATAB
+send => load_shift.DATAB
+send => reset_baud.DATAB
+send => Selector1.IN3
+send => Selector0.IN0
+reset => p_state.OUTPUTSELECT
+reset => p_state.OUTPUTSELECT
+clk => p_state~1.DATAIN
+baud_done => n_state.OUTPUTSELECT
+baud_done => n_state.OUTPUTSELECT
+baud_done => shift.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => n_state.OUTPUTSELECT
+bit_done => shift.DATAB
+shift <= shift.DB_MAX_OUTPUT_PORT_TYPE
+count <= count.DB_MAX_OUTPUT_PORT_TYPE
+reset_baud <= reset_baud.DB_MAX_OUTPUT_PORT_TYPE
+clear_bit <= clear_bit.DB_MAX_OUTPUT_PORT_TYPE
+load_shift <= load_shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|transmitter|baud_counter:inst2
+clk => p_count[0].CLK
+clk => p_count[1].CLK
+clk => p_count[2].CLK
+clk => p_count[3].CLK
+clk => p_count[4].CLK
+clk => p_count[5].CLK
+clk => p_count[6].CLK
+clk => p_count[7].CLK
+clk => p_count[8].CLK
+clk => p_count[9].CLK
+clk => p_count[10].CLK
+clk => p_count[11].CLK
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+reset => p_count.OUTPUTSELECT
+baud_done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|transmitter|bit_counter:inst3
+clk => p_cnt[0].CLK
+clk => p_cnt[1].CLK
+clk => p_cnt[2].CLK
+clk => p_cnt[3].CLK
+clk => p_cnt[4].CLK
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+clear => p_cnt.OUTPUTSELECT
+count => n_cnt[4].OUTPUTSELECT
+count => n_cnt[3].OUTPUTSELECT
+count => n_cnt[2].OUTPUTSELECT
+count => n_cnt[1].OUTPUTSELECT
+count => n_cnt[0].OUTPUTSELECT
+bit_done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|transmitter|parity:inst5
+data_in[0] => WideXor0.IN0
+data_in[0] => Data_out[2].DATAIN
+data_in[1] => WideXor0.IN1
+data_in[1] => Data_out[3].DATAIN
+data_in[2] => WideXor0.IN2
+data_in[2] => Data_out[4].DATAIN
+data_in[3] => WideXor0.IN3
+data_in[3] => Data_out[5].DATAIN
+data_in[4] => WideXor0.IN4
+data_in[4] => Data_out[6].DATAIN
+data_in[5] => WideXor0.IN5
+data_in[5] => Data_out[7].DATAIN
+data_in[6] => WideXor0.IN6
+data_in[6] => Data_out[8].DATAIN
+data_in[7] => WideXor0.IN7
+data_in[7] => Data_out[9].DATAIN
+Data_out[0] <= <VCC>
+Data_out[1] <= <GND>
+Data_out[2] <= data_in[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= data_in[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= data_in[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= data_in[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= data_in[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= data_in[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= data_in[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= data_in[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= <VCC>
+
+

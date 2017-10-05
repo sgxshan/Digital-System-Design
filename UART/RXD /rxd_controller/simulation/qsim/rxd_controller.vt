@@ -1,0 +1,423 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/13/2015 11:52:47"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    rxd_controller
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module rxd_controller_vlg_sample_tst(
+	bit_done,
+	clk,
+	data_in,
+	done_pulse,
+	half_pulse,
+	reset,
+	sampler_tx
+);
+input  bit_done;
+input  clk;
+input  data_in;
+input  done_pulse;
+input  half_pulse;
+input  reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(bit_done or clk or data_in or done_pulse or half_pulse or reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module rxd_controller_vlg_check_tst (
+	clear_bit,
+	load_shift,
+	parity_check,
+	reset_baud,
+	rxd_count,
+	rxd_shift,
+	sampler_rx
+);
+input  clear_bit;
+input  load_shift;
+input  parity_check;
+input  reset_baud;
+input  rxd_count;
+input  rxd_shift;
+input sampler_rx;
+
+reg  clear_bit_expected;
+reg  load_shift_expected;
+reg  parity_check_expected;
+reg  reset_baud_expected;
+reg  rxd_count_expected;
+reg  rxd_shift_expected;
+
+reg  clear_bit_prev;
+reg  load_shift_prev;
+reg  parity_check_prev;
+reg  reset_baud_prev;
+reg  rxd_count_prev;
+reg  rxd_shift_prev;
+
+reg  clear_bit_expected_prev;
+reg  load_shift_expected_prev;
+reg  parity_check_expected_prev;
+reg  reset_baud_expected_prev;
+reg  rxd_count_expected_prev;
+reg  rxd_shift_expected_prev;
+
+reg  last_clear_bit_exp;
+reg  last_load_shift_exp;
+reg  last_parity_check_exp;
+reg  last_reset_baud_exp;
+reg  last_rxd_count_exp;
+reg  last_rxd_shift_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:6] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 6'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	clear_bit_prev = clear_bit;
+	load_shift_prev = load_shift;
+	parity_check_prev = parity_check;
+	reset_baud_prev = reset_baud;
+	rxd_count_prev = rxd_count;
+	rxd_shift_prev = rxd_shift;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	clear_bit_expected_prev = clear_bit_expected;
+	load_shift_expected_prev = load_shift_expected;
+	parity_check_expected_prev = parity_check_expected;
+	reset_baud_expected_prev = reset_baud_expected;
+	rxd_count_expected_prev = rxd_count_expected;
+	rxd_shift_expected_prev = rxd_shift_expected;
+end
+
+
+
+// expected clear_bit
+initial
+begin
+	clear_bit_expected = 1'bX;
+	clear_bit_expected = #999000 1'b0;
+end 
+
+// expected load_shift
+initial
+begin
+	load_shift_expected = 1'bX;
+	load_shift_expected = #999000 1'b0;
+end 
+
+// expected parity_check
+initial
+begin
+	parity_check_expected = 1'bX;
+	parity_check_expected = #999000 1'b0;
+end 
+
+// expected reset_baud
+initial
+begin
+	reset_baud_expected = 1'bX;
+	reset_baud_expected = #999000 1'b0;
+end 
+
+// expected rxd_count
+initial
+begin
+	rxd_count_expected = 1'bX;
+	rxd_count_expected = #999000 1'b0;
+end 
+
+// expected rxd_shift
+initial
+begin
+	rxd_shift_expected = 1'bX;
+	rxd_shift_expected = #999000 1'b0;
+end 
+// generate trigger
+always @(clear_bit_expected or clear_bit or load_shift_expected or load_shift or parity_check_expected or parity_check or reset_baud_expected or reset_baud or rxd_count_expected or rxd_count or rxd_shift_expected or rxd_shift)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected clear_bit = %b | expected load_shift = %b | expected parity_check = %b | expected reset_baud = %b | expected rxd_count = %b | expected rxd_shift = %b | ",clear_bit_expected_prev,load_shift_expected_prev,parity_check_expected_prev,reset_baud_expected_prev,rxd_count_expected_prev,rxd_shift_expected_prev);
+	$display("| real clear_bit = %b | real load_shift = %b | real parity_check = %b | real reset_baud = %b | real rxd_count = %b | real rxd_shift = %b | ",clear_bit_prev,load_shift_prev,parity_check_prev,reset_baud_prev,rxd_count_prev,rxd_shift_prev);
+`endif
+	if (
+		( clear_bit_expected_prev !== 1'bx ) && ( clear_bit_prev !== clear_bit_expected_prev )
+		&& ((clear_bit_expected_prev !== last_clear_bit_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port clear_bit :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", clear_bit_expected_prev);
+		$display ("     Real value = %b", clear_bit_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_clear_bit_exp = clear_bit_expected_prev;
+	end
+	if (
+		( load_shift_expected_prev !== 1'bx ) && ( load_shift_prev !== load_shift_expected_prev )
+		&& ((load_shift_expected_prev !== last_load_shift_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port load_shift :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", load_shift_expected_prev);
+		$display ("     Real value = %b", load_shift_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_load_shift_exp = load_shift_expected_prev;
+	end
+	if (
+		( parity_check_expected_prev !== 1'bx ) && ( parity_check_prev !== parity_check_expected_prev )
+		&& ((parity_check_expected_prev !== last_parity_check_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port parity_check :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", parity_check_expected_prev);
+		$display ("     Real value = %b", parity_check_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_parity_check_exp = parity_check_expected_prev;
+	end
+	if (
+		( reset_baud_expected_prev !== 1'bx ) && ( reset_baud_prev !== reset_baud_expected_prev )
+		&& ((reset_baud_expected_prev !== last_reset_baud_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port reset_baud :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", reset_baud_expected_prev);
+		$display ("     Real value = %b", reset_baud_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_reset_baud_exp = reset_baud_expected_prev;
+	end
+	if (
+		( rxd_count_expected_prev !== 1'bx ) && ( rxd_count_prev !== rxd_count_expected_prev )
+		&& ((rxd_count_expected_prev !== last_rxd_count_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port rxd_count :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", rxd_count_expected_prev);
+		$display ("     Real value = %b", rxd_count_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_rxd_count_exp = rxd_count_expected_prev;
+	end
+	if (
+		( rxd_shift_expected_prev !== 1'bx ) && ( rxd_shift_prev !== rxd_shift_expected_prev )
+		&& ((rxd_shift_expected_prev !== last_rxd_shift_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port rxd_shift :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", rxd_shift_expected_prev);
+		$display ("     Real value = %b", rxd_shift_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_rxd_shift_exp = rxd_shift_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module rxd_controller_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg bit_done;
+reg clk;
+reg data_in;
+reg done_pulse;
+reg half_pulse;
+reg reset;
+// wires                                               
+wire clear_bit;
+wire load_shift;
+wire parity_check;
+wire reset_baud;
+wire rxd_count;
+wire rxd_shift;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+rxd_controller i1 (
+// port map - connection between master ports and signals/registers   
+	.bit_done(bit_done),
+	.clear_bit(clear_bit),
+	.clk(clk),
+	.data_in(data_in),
+	.done_pulse(done_pulse),
+	.half_pulse(half_pulse),
+	.load_shift(load_shift),
+	.parity_check(parity_check),
+	.reset(reset),
+	.reset_baud(reset_baud),
+	.rxd_count(rxd_count),
+	.rxd_shift(rxd_shift)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+	reset = #20000 1'b1;
+	reset = #40000 1'b0;
+end 
+
+// data_in
+initial
+begin
+	data_in = 1'b0;
+	data_in = #100000 1'b1;
+	data_in = #40000 1'b0;
+	data_in = #60000 1'b1;
+	data_in = #60000 1'b0;
+	data_in = #60000 1'b1;
+	data_in = #140000 1'b0;
+	data_in = #120000 1'b1;
+	data_in = #40000 1'b0;
+end 
+
+// half_pulse
+initial
+begin
+	half_pulse = 1'b0;
+	half_pulse = #70000 1'b1;
+	half_pulse = #10000 1'b0;
+end 
+
+// done_pulse
+initial
+begin
+	done_pulse = 1'b0;
+	done_pulse = #110000 1'b1;
+	done_pulse = #10000 1'b0;
+	done_pulse = #30000 1'b1;
+	done_pulse = #10000 1'b0;
+	done_pulse = #50000 1'b1;
+	done_pulse = #10000 1'b0;
+	done_pulse = #60000 1'b1;
+	done_pulse = #10000 1'b0;
+	done_pulse = #50000 1'b1;
+	done_pulse = #10000 1'b0;
+	done_pulse = #40000 1'b1;
+	done_pulse = #10000 1'b0;
+end 
+
+// bit_done
+initial
+begin
+	bit_done = 1'b0;
+	bit_done = #340000 1'b1;
+	bit_done = #10000 1'b0;
+end 
+
+rxd_controller_vlg_sample_tst tb_sample (
+	.bit_done(bit_done),
+	.clk(clk),
+	.data_in(data_in),
+	.done_pulse(done_pulse),
+	.half_pulse(half_pulse),
+	.reset(reset),
+	.sampler_tx(sampler)
+);
+
+rxd_controller_vlg_check_tst tb_out(
+	.clear_bit(clear_bit),
+	.load_shift(load_shift),
+	.parity_check(parity_check),
+	.reset_baud(reset_baud),
+	.rxd_count(rxd_count),
+	.rxd_shift(rxd_shift),
+	.sampler_rx(sampler)
+);
+endmodule
+

@@ -1,0 +1,105 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Liverpool\ELEC373\Assignment 1\UART\TXD_V2\simulation\modelsim
+vbaud_counter
+!i10b 1
+!s100 nzJbKVl=WCH^kZ9fE[^Ej1
+IB618fTd>e1eNzT_m_mf5j1
+VDj;M6KzjWFAE;:Go=Gn]P2
+Z1 dF:\Liverpool\ELEC373\Assignment 1\UART\TXD_V2\simulation\modelsim
+w1447359248
+8F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/baud_counter.v
+FF:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/baud_counter.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1447587952.782000
+!s107 F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/baud_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2|F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/baud_counter.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2} -O0
+vbit_counter
+I3X>>hCDCYk]F@9WP[^5Ke2
+VnERSgldF_WPLWEK:_XS>00
+R1
+Z5 w1447359396
+8F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/bit_counter.v
+FF:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/bit_counter.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 UUdc9o_m[8Y?^9cFzOViA0
+!s85 0
+!s108 1447587952.508000
+!s107 F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/bit_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2|F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/bit_counter.v|
+!s101 -O0
+vcontroller
+IL7f:hmaELKYmB>bkaZ_Hn3
+Vl1Mn25dXd@kD_;EkO6=g^3
+R1
+R5
+8F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/controller.v
+FF:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/controller.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 o`K9?H:D^A:zH]k;M_njP3
+!s85 0
+!s108 1447587952.299000
+!s107 F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2|F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/controller.v|
+!s101 -O0
+vparity
+I@EXmeNW@nIQLCaecj[6BX2
+VB?L5@n?FC1_QLh4i<mTj80
+R1
+R5
+8F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/parity.v
+FF:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/parity.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 MFal<hL3WcPXLE6QC6N2F2
+!s85 0
+!s108 1447587952.073000
+!s107 F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/parity.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2|F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/parity.v|
+!s101 -O0
+vshift
+Ik;8jYl[PdGUINUg_Be56Q2
+V7FY7HhALf`^>[Uc=:oS]K2
+R1
+w1447359394
+8F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/shift.v
+FF:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/shift.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 4@BVE[X26Xg86aKYZdYH73
+!s85 0
+!s108 1447587951.858000
+!s107 F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/shift.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2|F:/Liverpool/ELEC373/Assignment 1/UART/TXD_V2/shift.v|
+!s101 -O0

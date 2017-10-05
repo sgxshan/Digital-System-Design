@@ -1,0 +1,156 @@
+$comment
+	File created using the following command:
+		vcd file seg.msim.vcd -direction
+$end
+$date
+	Wed Nov 11 11:57:48 2015
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module seg_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 11 " data_in [10:0] $end
+$var reg 1 # reset $end
+$var wire 1 $ data_1 [6] $end
+$var wire 1 % data_1 [5] $end
+$var wire 1 & data_1 [4] $end
+$var wire 1 ' data_1 [3] $end
+$var wire 1 ( data_1 [2] $end
+$var wire 1 ) data_1 [1] $end
+$var wire 1 * data_1 [0] $end
+$var wire 1 + data_2 [6] $end
+$var wire 1 , data_2 [5] $end
+$var wire 1 - data_2 [4] $end
+$var wire 1 . data_2 [3] $end
+$var wire 1 / data_2 [2] $end
+$var wire 1 0 data_2 [1] $end
+$var wire 1 1 data_2 [0] $end
+$var wire 1 2 sampler $end
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 Mux8~0_combout $end
+$var wire 1 : Mux15~0_combout $end
+$var wire 1 ; Mux15~0clkctrl_outclk $end
+$var wire 1 < data_1[0]$latch~combout $end
+$var wire 1 = Mux9~0_combout $end
+$var wire 1 > data_1[1]$latch~combout $end
+$var wire 1 ? Mux10~0_combout $end
+$var wire 1 @ data_1[2]$latch~combout $end
+$var wire 1 A Mux11~0_combout $end
+$var wire 1 B data_1[3]$latch~combout $end
+$var wire 1 C Mux12~0_combout $end
+$var wire 1 D data_1[4]$latch~combout $end
+$var wire 1 E Mux13~0_combout $end
+$var wire 1 F data_1[5]$latch~combout $end
+$var wire 1 G Mux14~0_combout $end
+$var wire 1 H data_1[6]$latch~combout $end
+$var wire 1 I Mux7~0_combout $end
+$var wire 1 J Mux7~0clkctrl_outclk $end
+$var wire 1 K Mux1~0_combout $end
+$var wire 1 L data_2[0]$latch~combout $end
+$var wire 1 M Mux0~0_combout $end
+$var wire 1 N data_2[1]$latch~combout $end
+$var wire 1 O Mux2~0_combout $end
+$var wire 1 P data_2[2]$latch~combout $end
+$var wire 1 Q Mux3~0_combout $end
+$var wire 1 R data_2[3]$latch~combout $end
+$var wire 1 S Mux4~0_combout $end
+$var wire 1 T data_2[4]$latch~combout $end
+$var wire 1 U Mux5~0_combout $end
+$var wire 1 V data_2[5]$latch~combout $end
+$var wire 1 W Mux6~0_combout $end
+$var wire 1 X data_2[6]$latch~combout $end
+$var wire 1 Y data_in~combout [10] $end
+$var wire 1 Z data_in~combout [9] $end
+$var wire 1 [ data_in~combout [8] $end
+$var wire 1 \ data_in~combout [7] $end
+$var wire 1 ] data_in~combout [6] $end
+$var wire 1 ^ data_in~combout [5] $end
+$var wire 1 _ data_in~combout [4] $end
+$var wire 1 ` data_in~combout [3] $end
+$var wire 1 a data_in~combout [2] $end
+$var wire 1 b data_in~combout [1] $end
+$var wire 1 c data_in~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b1010101100 "
+0#
+1*
+0)
+0(
+1'
+1&
+0%
+0$
+01
+10
+0/
+0.
+1-
+0,
+0+
+x2
+03
+14
+x5
+16
+17
+18
+19
+0:
+0;
+1<
+0=
+0>
+0?
+0@
+1A
+1B
+1C
+1D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+1M
+1N
+0O
+0P
+0Q
+0R
+1S
+1T
+0U
+0V
+0W
+0X
+zc
+0b
+1a
+1`
+0_
+1^
+0]
+1\
+0[
+zZ
+zY
+$end
+#1000000

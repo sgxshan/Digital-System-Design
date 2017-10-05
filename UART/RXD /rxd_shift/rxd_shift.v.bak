@@ -1,0 +1,29 @@
+module rxd_shift (clk, serial_in, rshift, data, reset);
+input clk;
+input reset;
+input rshift;
+input serial_in;
+output data;
+
+reg[7:0] pshift, nshift;
+
+assign data=pshift;
+
+always@(posedge clk)
+begin 
+   if (clk)
+   pshift<=nshift;
+end
+always@(pshift,reset,rshift,serial_in)
+	begin 
+		nshift=pshift;
+		if (reset)
+			nshift = 8'b0;
+		if(rshift)
+			begin
+				nshift = pshift >> 1;
+				nshift[7] = serial_in;
+			end
+	end
+endmodule
+

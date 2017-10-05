@@ -1,0 +1,82 @@
+module controller (data_in, reset, clk, half_pulse, done_pulse, bit_done, rshift, rxd_count, reset_baud, clear_bit);
+
+input data_in;
+input reset;
+input clk;
+input half_pulse;
+input done_pulse;
+input bit_done, 
+output rshift;
+output rxd_count;
+output reset_baud;
+output clear_bit;
+
+
+reg rshift;
+reg rxd_count;
+reg reset_baud;
+reg clear_bit;
+reg [1:0]p_state, n_state;
+
+parameter P=2'b00, Q=2'b01, S=2'b10, R=2'b11;
+reg [1:0]p_state, n_state;
+always @ (posedge clk)
+ begin
+	if (reset)
+		p_state <= P;
+	else 
+		p_state <= n_state;
+end
+
+always @ (send, p_state,send,baud_done, bit_done)
+	begin 
+		reset_baud=0;
+		clear_bit=0; 
+		rxd_count=0;
+		rshift=0;
+		n_state=p_state;
+		case (p_state)
+			P: 
+				begin
+					if(data_in)
+						begin 
+							clear_bit=1;
+							reset_baud=1;
+							n_state=Q;
+						end
+					else 
+						n_state=P;
+				end
+			Q: 
+				begin
+					if(half_pulse)
+					   reset_baud=1;
+						n_state=R;
+					else
+						n_state=Q;
+				end
+			R: 
+				begin
+					if(done_pulse)
+						begin
+							if(bit_done)
+								n_state=S;
+							else
+								begin
+									rxd_count=1;
+									rshift=1;
+								end
+						end
+					else
+						n_state=Q;
+				end
+			S: 
+				begin
+					if()
+						n_state=P;
+					else
+						n_state=S;
+				end
+		endcase 
+	end
+endmodule

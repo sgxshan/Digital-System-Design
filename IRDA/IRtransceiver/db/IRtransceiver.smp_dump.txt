@@ -1,0 +1,13 @@
+
+State Machine - |IRtransceiver|controller:inst|p_state
+Name p_state.S_1 p_state.S_3 p_state.S_2 
+p_state.S_1 0 0 0 
+p_state.S_2 1 0 1 
+p_state.S_3 1 1 0 
+
+State Machine - |IRtransceiver|rxd_controller:inst6|p_state
+Name p_state.S_4 p_state.S_3 p_state.S_2 p_state.S_1 
+p_state.S_1 0 0 0 0 
+p_state.S_2 0 0 1 1 
+p_state.S_3 0 1 0 1 
+p_state.S_4 1 0 0 1 

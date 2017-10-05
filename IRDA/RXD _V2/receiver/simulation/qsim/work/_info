@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dM:\RXD\receiver\simulation\qsim
+vreceiver
+Z1 I`eLkF60B>nCODePi9cl3Y2
+Z2 ViXI^_oUG@k@MBma>^T7<O2
+Z3 dM:\UART\RXD _V2\receiver\simulation\qsim
+Z4 w1447351928
+Z5 8receiver.vo
+Z6 Freceiver.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|receiver.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 _nih1Z^I327c7AlMQDBcX1
+!s85 0
+Z11 !s108 1447351931.084000
+Z12 !s107 receiver.vo|
+!s101 -O0
+vreceiver_vlg_check_tst
+Z13 IVeSJZfY6N8FM^P9_TGROj0
+Z14 ViR?n>_F`i<Wmj<Qd[UnRa0
+R3
+Z15 w1447351207
+Z16 8receiver.vt
+Z17 Freceiver.vt
+L0 61
+R7
+r1
+31
+Z18 !s108 1447351215.497000
+Z19 !s107 receiver.vt|
+Z20 !s90 -work|work|receiver.vt|
+R9
+Z21 !s100 z]zmkI;1KD=J@LVFS0JE>1
+!i10b 1
+!s85 0
+!s101 -O0
+vreceiver_vlg_sample_tst
+!i10b 1
+Z22 !s100 HFEP4R9Ob6bbYNchbLWXi3
+Z23 IENTI21fMDX[h8[UbbH[Dl2
+Z24 V;zd:gadhc5zgzM>H0PT7Z1
+R3
+w1447351925
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+!s108 1447351932.223000
+!s107 receiver.vt|
+R20
+!s101 -O0
+R9
+vreceiver_vlg_vec_tst
+Z25 I6GoF7k@<hf9A9NAb4m7J?1
+Z26 VkQOi:>F0f1Z`LBlE5kMRF2
+R3
+R15
+R16
+R17
+Z27 L0 467
+R7
+r1
+31
+R18
+R19
+R20
+R9
+Z28 !s100 F=M64TH191m]z@Al[oc_N0
+!i10b 1
+!s85 0
+!s101 -O0

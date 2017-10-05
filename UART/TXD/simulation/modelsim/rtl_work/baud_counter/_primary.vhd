@@ -1,0 +1,14 @@
+library verilog;
+use verilog.vl_types.all;
+entity baud_counter is
+    generic(
+        my_baud         : vl_logic_vector(0 to 11) := (Hi0, Hi1, Hi0, Hi1, Hi0, Hi0, Hi0, Hi1, Hi0, Hi1, Hi1, Hi0)
+    );
+    port(
+        clk             : in     vl_logic;
+        reset           : in     vl_logic;
+        baud_done       : out    vl_logic
+    );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of my_baud : constant is 1;
+end baud_counter;

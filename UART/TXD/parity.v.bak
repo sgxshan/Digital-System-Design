@@ -1,0 +1,9 @@
+module parity(data_in, Data_out);
+input [7:0]data_in; 
+output [10:0]Data_out;
+wire parity_bit;
+assign parity_bit =^data_in;
+assign Data_out = {1'b1,parity_bit,data_in,1'b0};
+endmodule
+
+

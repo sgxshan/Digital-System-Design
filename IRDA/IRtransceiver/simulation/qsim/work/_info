@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dM:\UART\IRtransceiver\simulation\qsim
+vIRtransceiver
+Z1 !s100 8?2FQK0ae]`02Cagzo<fI0
+Z2 II_`4XLQSRc>XD8Hm<>UVB1
+Z3 VH3mzcn6dmQRPOI9e;HlMZ3
+Z4 dM:\UART\IRtransceiver\simulation\qsim
+Z5 w1449744269
+Z6 8IRtransceiver.vo
+Z7 FIRtransceiver.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|IRtransceiver.vo|
+Z10 o-work work -O0
+Z11 n@i@rtransceiver
+!i10b 1
+!s85 0
+Z12 !s108 1449744271.910000
+Z13 !s107 IRtransceiver.vo|
+!s101 -O0
+vIRtransceiver_vlg_check_tst
+!i10b 1
+Z14 !s100 f];jH0bTiAoaPeb_?D2j;1
+Z15 I=I_I9z8eg;SSnNSiYJ=z23
+Z16 VHK<VYDW:YfCiMR_gIzUOQ0
+R4
+Z17 w1449744266
+Z18 8IRtransceiver.vt
+Z19 FIRtransceiver.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z20 !s108 1449744273.673000
+Z21 !s107 IRtransceiver.vt|
+Z22 !s90 -work|work|IRtransceiver.vt|
+!s101 -O0
+R10
+Z23 n@i@rtransceiver_vlg_check_tst
+vIRtransceiver_vlg_sample_tst
+!i10b 1
+Z24 !s100 7[hA]l]zehI;;VMDDIQMF0
+Z25 IQI4^LV?T7848E2H2kke512
+Z26 V[jARNM56>C_nbSM6fR[CM1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@i@rtransceiver_vlg_sample_tst
+vIRtransceiver_vlg_vec_tst
+!i10b 1
+Z28 !s100 k518QiG8>nWVf;EK4l6of3
+Z29 INQ:AECiFojF=ck3WznU6o3
+Z30 VFLYGmE;;:[i;JG4PlNNS>1
+R4
+R17
+R18
+R19
+Z31 L0 527
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@i@rtransceiver_vlg_vec_tst

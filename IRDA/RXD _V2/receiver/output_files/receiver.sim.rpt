@@ -1,0 +1,431 @@
+Simulator report for receiver
+Thu Nov 12 18:22:45 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 99.0 us      ;
+; Simulation Netlist Size     ; 259 nodes    ;
+; Simulation Coverage         ;      67.57 % ;
+; Total Number of Transitions ; 877885       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                 ;
++--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                                                     ; Setting                               ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                            ; Timing        ;
+; Start time                                                                                 ; 0 ns                                  ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                   ;               ;
+; Vector input source                                                                        ; M:/UART/RXD _V2/receiver/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                    ; On            ;
+; Check outputs                                                                              ; Off                                   ; Off           ;
+; Report simulation coverage                                                                 ; On                                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                   ; Off           ;
+; Detect glitches                                                                            ; Off                                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                  ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      67.57 % ;
+; Total nodes checked                                 ; 259          ;
+; Total output ports checked                          ; 259          ;
+; Total output ports with complete 1/0-value coverage ; 175          ;
+; Total output ports with no 1/0-value coverage       ; 10           ;
+; Total output ports with no 1-value coverage         ; 63           ;
+; Total output ports with no 0-value coverage         ; 31           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                              ;
++-------------------------------------------+-------------------------------------------+------------------+
+; Node Name                                 ; Output Port Name                          ; Output Port Type ;
++-------------------------------------------+-------------------------------------------+------------------+
+; |receiver|data_in                         ; |receiver|data_in                         ; out              ;
+; |receiver|reset                           ; |receiver|reset                           ; out              ;
+; |receiver|clk                             ; |receiver|clk                             ; out              ;
+; |receiver|half_baud2                      ; |receiver|half_baud2                      ; pin_out          ;
+; |receiver|baud_done                       ; |receiver|baud_done                       ; pin_out          ;
+; |receiver|output[9]                       ; |receiver|output[9]                       ; pin_out          ;
+; |receiver|output[8]                       ; |receiver|output[8]                       ; pin_out          ;
+; |receiver|output[7]                       ; |receiver|output[7]                       ; pin_out          ;
+; |receiver|output[6]                       ; |receiver|output[6]                       ; pin_out          ;
+; |receiver|output[5]                       ; |receiver|output[5]                       ; pin_out          ;
+; |receiver|output[4]                       ; |receiver|output[4]                       ; pin_out          ;
+; |receiver|output[3]                       ; |receiver|output[3]                       ; pin_out          ;
+; |receiver|output[2]                       ; |receiver|output[2]                       ; pin_out          ;
+; |receiver|output[1]                       ; |receiver|output[1]                       ; pin_out          ;
+; |receiver|output[0]                       ; |receiver|output[0]                       ; pin_out          ;
+; |receiver|rxd_shift:inst8|nshift~0        ; |receiver|rxd_shift:inst8|nshift~0        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~1        ; |receiver|rxd_shift:inst8|nshift~1        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~2        ; |receiver|rxd_shift:inst8|nshift~2        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~3        ; |receiver|rxd_shift:inst8|nshift~3        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~4        ; |receiver|rxd_shift:inst8|nshift~4        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~5        ; |receiver|rxd_shift:inst8|nshift~5        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~6        ; |receiver|rxd_shift:inst8|nshift~6        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~7        ; |receiver|rxd_shift:inst8|nshift~7        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~8        ; |receiver|rxd_shift:inst8|nshift~8        ; out              ;
+; |receiver|rxd_shift:inst8|nshift~9        ; |receiver|rxd_shift:inst8|nshift~9        ; out              ;
+; |receiver|rxd_shift:inst8|nshift[9]       ; |receiver|rxd_shift:inst8|nshift[9]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[8]       ; |receiver|rxd_shift:inst8|nshift[8]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[7]       ; |receiver|rxd_shift:inst8|nshift[7]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[6]       ; |receiver|rxd_shift:inst8|nshift[6]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[5]       ; |receiver|rxd_shift:inst8|nshift[5]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[4]       ; |receiver|rxd_shift:inst8|nshift[4]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[3]       ; |receiver|rxd_shift:inst8|nshift[3]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[2]       ; |receiver|rxd_shift:inst8|nshift[2]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[1]       ; |receiver|rxd_shift:inst8|nshift[1]       ; out              ;
+; |receiver|rxd_shift:inst8|nshift[0]       ; |receiver|rxd_shift:inst8|nshift[0]       ; out              ;
+; |receiver|rxd_shift:inst8|pshift[0]       ; |receiver|rxd_shift:inst8|pshift[0]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[1]       ; |receiver|rxd_shift:inst8|pshift[1]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[2]       ; |receiver|rxd_shift:inst8|pshift[2]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[3]       ; |receiver|rxd_shift:inst8|pshift[3]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[4]       ; |receiver|rxd_shift:inst8|pshift[4]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[5]       ; |receiver|rxd_shift:inst8|pshift[5]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[6]       ; |receiver|rxd_shift:inst8|pshift[6]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[7]       ; |receiver|rxd_shift:inst8|pshift[7]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[8]       ; |receiver|rxd_shift:inst8|pshift[8]       ; regout           ;
+; |receiver|rxd_shift:inst8|pshift[9]       ; |receiver|rxd_shift:inst8|pshift[9]       ; regout           ;
+; |receiver|counter:inst9|p_cnt[3]          ; |receiver|counter:inst9|p_cnt[3]          ; regout           ;
+; |receiver|counter:inst9|p_cnt[2]          ; |receiver|counter:inst9|p_cnt[2]          ; regout           ;
+; |receiver|counter:inst9|p_cnt~1           ; |receiver|counter:inst9|p_cnt~1           ; out              ;
+; |receiver|counter:inst9|p_cnt~2           ; |receiver|counter:inst9|p_cnt~2           ; out              ;
+; |receiver|counter:inst9|p_cnt~3           ; |receiver|counter:inst9|p_cnt~3           ; out              ;
+; |receiver|counter:inst9|p_cnt~4           ; |receiver|counter:inst9|p_cnt~4           ; out              ;
+; |receiver|counter:inst9|p_cnt[1]          ; |receiver|counter:inst9|p_cnt[1]          ; regout           ;
+; |receiver|counter:inst9|p_cnt[0]          ; |receiver|counter:inst9|p_cnt[0]          ; regout           ;
+; |receiver|counter:inst9|n_cnt~0           ; |receiver|counter:inst9|n_cnt~0           ; out              ;
+; |receiver|counter:inst9|n_cnt~1           ; |receiver|counter:inst9|n_cnt~1           ; out              ;
+; |receiver|counter:inst9|n_cnt~2           ; |receiver|counter:inst9|n_cnt~2           ; out              ;
+; |receiver|counter:inst9|n_cnt~3           ; |receiver|counter:inst9|n_cnt~3           ; out              ;
+; |receiver|counter:inst9|n_cnt~4           ; |receiver|counter:inst9|n_cnt~4           ; out              ;
+; |receiver|counter:inst9|n_cnt[3]          ; |receiver|counter:inst9|n_cnt[3]          ; out              ;
+; |receiver|counter:inst9|n_cnt[2]          ; |receiver|counter:inst9|n_cnt[2]          ; out              ;
+; |receiver|counter:inst9|n_cnt[1]          ; |receiver|counter:inst9|n_cnt[1]          ; out              ;
+; |receiver|counter:inst9|n_cnt[0]          ; |receiver|counter:inst9|n_cnt[0]          ; out              ;
+; |receiver|baud_done:inst6|p_count~0       ; |receiver|baud_done:inst6|p_count~0       ; out              ;
+; |receiver|baud_done:inst6|p_count~1       ; |receiver|baud_done:inst6|p_count~1       ; out              ;
+; |receiver|baud_done:inst6|p_count~2       ; |receiver|baud_done:inst6|p_count~2       ; out              ;
+; |receiver|baud_done:inst6|p_count~3       ; |receiver|baud_done:inst6|p_count~3       ; out              ;
+; |receiver|baud_done:inst6|p_count~4       ; |receiver|baud_done:inst6|p_count~4       ; out              ;
+; |receiver|baud_done:inst6|p_count~5       ; |receiver|baud_done:inst6|p_count~5       ; out              ;
+; |receiver|baud_done:inst6|p_count~6       ; |receiver|baud_done:inst6|p_count~6       ; out              ;
+; |receiver|baud_done:inst6|p_count~7       ; |receiver|baud_done:inst6|p_count~7       ; out              ;
+; |receiver|baud_done:inst6|p_count~8       ; |receiver|baud_done:inst6|p_count~8       ; out              ;
+; |receiver|baud_done:inst6|p_count~9       ; |receiver|baud_done:inst6|p_count~9       ; out              ;
+; |receiver|baud_done:inst6|p_count~10      ; |receiver|baud_done:inst6|p_count~10      ; out              ;
+; |receiver|baud_done:inst6|p_count~11      ; |receiver|baud_done:inst6|p_count~11      ; out              ;
+; |receiver|baud_done:inst6|p_count[10]     ; |receiver|baud_done:inst6|p_count[10]     ; regout           ;
+; |receiver|baud_done:inst6|p_count[9]      ; |receiver|baud_done:inst6|p_count[9]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[8]      ; |receiver|baud_done:inst6|p_count[8]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[7]      ; |receiver|baud_done:inst6|p_count[7]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[6]      ; |receiver|baud_done:inst6|p_count[6]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[5]      ; |receiver|baud_done:inst6|p_count[5]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[4]      ; |receiver|baud_done:inst6|p_count[4]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[3]      ; |receiver|baud_done:inst6|p_count[3]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[2]      ; |receiver|baud_done:inst6|p_count[2]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[1]      ; |receiver|baud_done:inst6|p_count[1]      ; regout           ;
+; |receiver|baud_done:inst6|p_count[0]      ; |receiver|baud_done:inst6|p_count[0]      ; regout           ;
+; |receiver|baud_done:inst6|n_count[11]     ; |receiver|baud_done:inst6|n_count[11]     ; out              ;
+; |receiver|baud_done:inst6|n_count[10]     ; |receiver|baud_done:inst6|n_count[10]     ; out              ;
+; |receiver|baud_done:inst6|n_count[9]      ; |receiver|baud_done:inst6|n_count[9]      ; out              ;
+; |receiver|baud_done:inst6|n_count[8]      ; |receiver|baud_done:inst6|n_count[8]      ; out              ;
+; |receiver|baud_done:inst6|n_count[7]      ; |receiver|baud_done:inst6|n_count[7]      ; out              ;
+; |receiver|baud_done:inst6|n_count[6]      ; |receiver|baud_done:inst6|n_count[6]      ; out              ;
+; |receiver|baud_done:inst6|n_count[5]      ; |receiver|baud_done:inst6|n_count[5]      ; out              ;
+; |receiver|baud_done:inst6|n_count[4]      ; |receiver|baud_done:inst6|n_count[4]      ; out              ;
+; |receiver|baud_done:inst6|n_count[3]      ; |receiver|baud_done:inst6|n_count[3]      ; out              ;
+; |receiver|baud_done:inst6|n_count[2]      ; |receiver|baud_done:inst6|n_count[2]      ; out              ;
+; |receiver|baud_done:inst6|n_count[1]      ; |receiver|baud_done:inst6|n_count[1]      ; out              ;
+; |receiver|baud_done:inst6|n_count[0]      ; |receiver|baud_done:inst6|n_count[0]      ; out              ;
+; |receiver|rxd_controller:inst|p_state~0   ; |receiver|rxd_controller:inst|p_state~0   ; out              ;
+; |receiver|rxd_controller:inst|p_state~1   ; |receiver|rxd_controller:inst|p_state~1   ; out              ;
+; |receiver|rxd_controller:inst|p_state~2   ; |receiver|rxd_controller:inst|p_state~2   ; out              ;
+; |receiver|rxd_controller:inst|p_state~3   ; |receiver|rxd_controller:inst|p_state~3   ; out              ;
+; |receiver|rxd_controller:inst|p_state.P   ; |receiver|rxd_controller:inst|p_state.P   ; regout           ;
+; |receiver|rxd_controller:inst|n_state~0   ; |receiver|rxd_controller:inst|n_state~0   ; out              ;
+; |receiver|rxd_controller:inst|n_state~1   ; |receiver|rxd_controller:inst|n_state~1   ; out              ;
+; |receiver|rxd_controller:inst|n_state~2   ; |receiver|rxd_controller:inst|n_state~2   ; out              ;
+; |receiver|rxd_controller:inst|n_state~3   ; |receiver|rxd_controller:inst|n_state~3   ; out              ;
+; |receiver|rxd_controller:inst|n_state~6   ; |receiver|rxd_controller:inst|n_state~6   ; out              ;
+; |receiver|rxd_controller:inst|n_state~7   ; |receiver|rxd_controller:inst|n_state~7   ; out              ;
+; |receiver|rxd_controller:inst|rxd_shift~0 ; |receiver|rxd_controller:inst|rxd_shift~0 ; out              ;
+; |receiver|rxd_controller:inst|n_state~8   ; |receiver|rxd_controller:inst|n_state~8   ; out              ;
+; |receiver|rxd_controller:inst|n_state~9   ; |receiver|rxd_controller:inst|n_state~9   ; out              ;
+; |receiver|rxd_controller:inst|n_state~10  ; |receiver|rxd_controller:inst|n_state~10  ; out              ;
+; |receiver|rxd_controller:inst|p_state.Q   ; |receiver|rxd_controller:inst|p_state.Q   ; regout           ;
+; |receiver|rxd_controller:inst|clear_bit   ; |receiver|rxd_controller:inst|clear_bit   ; out              ;
+; |receiver|rxd_controller:inst|p_state.R   ; |receiver|rxd_controller:inst|p_state.R   ; regout           ;
+; |receiver|rxd_controller:inst|rxd_count   ; |receiver|rxd_controller:inst|rxd_count   ; out              ;
+; |receiver|rxd_controller:inst|p_state.S   ; |receiver|rxd_controller:inst|p_state.S   ; regout           ;
+; |receiver|rxd_controller:inst|rxd_shift   ; |receiver|rxd_controller:inst|rxd_shift   ; out              ;
+; |receiver|rxd_controller:inst|p_state~4   ; |receiver|rxd_controller:inst|p_state~4   ; out0             ;
+; |receiver|rxd_controller:inst|p_state.P~0 ; |receiver|rxd_controller:inst|p_state.P~0 ; out0             ;
+; |receiver|rxd_controller:inst|n_state~14  ; |receiver|rxd_controller:inst|n_state~14  ; out0             ;
+; |receiver|rxd_controller:inst|p_state.Q~0 ; |receiver|rxd_controller:inst|p_state.Q~0 ; out0             ;
+; |receiver|rxd_controller:inst|n_state~16  ; |receiver|rxd_controller:inst|n_state~16  ; out0             ;
+; |receiver|rxd_controller:inst|p_state.R~0 ; |receiver|rxd_controller:inst|p_state.R~0 ; out0             ;
+; |receiver|rxd_controller:inst|n_state~18  ; |receiver|rxd_controller:inst|n_state~18  ; out0             ;
+; |receiver|rxd_controller:inst|p_state.S~0 ; |receiver|rxd_controller:inst|p_state.S~0 ; out0             ;
+; |receiver|rxd_controller:inst|n_state~20  ; |receiver|rxd_controller:inst|n_state~20  ; out0             ;
+; |receiver|rxd_controller:inst|p_state~8   ; |receiver|rxd_controller:inst|p_state~8   ; out0             ;
+; |receiver|rxd_parity:inst2|WideXor0       ; |receiver|rxd_parity:inst2|WideXor0       ; out0             ;
+; |receiver|rxd_parity:inst2|always0~0      ; |receiver|rxd_parity:inst2|always0~0      ; out0             ;
+; |receiver|rxd_controller:inst|Selector0~0 ; |receiver|rxd_controller:inst|Selector0~0 ; out0             ;
+; |receiver|rxd_controller:inst|Selector0~1 ; |receiver|rxd_controller:inst|Selector0~1 ; out0             ;
+; |receiver|rxd_controller:inst|Selector0~2 ; |receiver|rxd_controller:inst|Selector0~2 ; out0             ;
+; |receiver|rxd_controller:inst|Selector1~0 ; |receiver|rxd_controller:inst|Selector1~0 ; out0             ;
+; |receiver|rxd_controller:inst|Selector1~1 ; |receiver|rxd_controller:inst|Selector1~1 ; out0             ;
+; |receiver|rxd_controller:inst|Selector1~3 ; |receiver|rxd_controller:inst|Selector1~3 ; out0             ;
+; |receiver|rxd_controller:inst|Selector2~0 ; |receiver|rxd_controller:inst|Selector2~0 ; out0             ;
+; |receiver|rxd_controller:inst|Selector2~3 ; |receiver|rxd_controller:inst|Selector2~3 ; out0             ;
+; |receiver|rxd_controller:inst|Selector2~4 ; |receiver|rxd_controller:inst|Selector2~4 ; out0             ;
+; |receiver|rxd_controller:inst|Selector3~0 ; |receiver|rxd_controller:inst|Selector3~0 ; out0             ;
+; |receiver|rxd_controller:inst|Selector3~2 ; |receiver|rxd_controller:inst|Selector3~2 ; out0             ;
+; |receiver|rxd_controller:inst|Selector3~3 ; |receiver|rxd_controller:inst|Selector3~3 ; out0             ;
+; |receiver|rxd_controller:inst|Selector4~0 ; |receiver|rxd_controller:inst|Selector4~0 ; out0             ;
+; |receiver|rxd_controller:inst|Selector4~2 ; |receiver|rxd_controller:inst|Selector4~2 ; out0             ;
+; |receiver|counter:inst9|Add0~0            ; |receiver|counter:inst9|Add0~0            ; out0             ;
+; |receiver|counter:inst9|Add0~1            ; |receiver|counter:inst9|Add0~1            ; out0             ;
+; |receiver|counter:inst9|Add0~2            ; |receiver|counter:inst9|Add0~2            ; out0             ;
+; |receiver|counter:inst9|Add0~3            ; |receiver|counter:inst9|Add0~3            ; out0             ;
+; |receiver|counter:inst9|Add0~4            ; |receiver|counter:inst9|Add0~4            ; out0             ;
+; |receiver|counter:inst9|Add0~5            ; |receiver|counter:inst9|Add0~5            ; out0             ;
+; |receiver|counter:inst9|Add0~6            ; |receiver|counter:inst9|Add0~6            ; out0             ;
+; |receiver|baud_done:inst6|Add0~0          ; |receiver|baud_done:inst6|Add0~0          ; out0             ;
+; |receiver|baud_done:inst6|Add0~1          ; |receiver|baud_done:inst6|Add0~1          ; out0             ;
+; |receiver|baud_done:inst6|Add0~2          ; |receiver|baud_done:inst6|Add0~2          ; out0             ;
+; |receiver|baud_done:inst6|Add0~3          ; |receiver|baud_done:inst6|Add0~3          ; out0             ;
+; |receiver|baud_done:inst6|Add0~4          ; |receiver|baud_done:inst6|Add0~4          ; out0             ;
+; |receiver|baud_done:inst6|Add0~5          ; |receiver|baud_done:inst6|Add0~5          ; out0             ;
+; |receiver|baud_done:inst6|Add0~6          ; |receiver|baud_done:inst6|Add0~6          ; out0             ;
+; |receiver|baud_done:inst6|Add0~7          ; |receiver|baud_done:inst6|Add0~7          ; out0             ;
+; |receiver|baud_done:inst6|Add0~8          ; |receiver|baud_done:inst6|Add0~8          ; out0             ;
+; |receiver|baud_done:inst6|Add0~9          ; |receiver|baud_done:inst6|Add0~9          ; out0             ;
+; |receiver|baud_done:inst6|Add0~10         ; |receiver|baud_done:inst6|Add0~10         ; out0             ;
+; |receiver|baud_done:inst6|Add0~11         ; |receiver|baud_done:inst6|Add0~11         ; out0             ;
+; |receiver|baud_done:inst6|Add0~12         ; |receiver|baud_done:inst6|Add0~12         ; out0             ;
+; |receiver|baud_done:inst6|Add0~13         ; |receiver|baud_done:inst6|Add0~13         ; out0             ;
+; |receiver|baud_done:inst6|Add0~14         ; |receiver|baud_done:inst6|Add0~14         ; out0             ;
+; |receiver|baud_done:inst6|Add0~15         ; |receiver|baud_done:inst6|Add0~15         ; out0             ;
+; |receiver|baud_done:inst6|Add0~16         ; |receiver|baud_done:inst6|Add0~16         ; out0             ;
+; |receiver|baud_done:inst6|Add0~17         ; |receiver|baud_done:inst6|Add0~17         ; out0             ;
+; |receiver|baud_done:inst6|Add0~18         ; |receiver|baud_done:inst6|Add0~18         ; out0             ;
+; |receiver|baud_done:inst6|Add0~19         ; |receiver|baud_done:inst6|Add0~19         ; out0             ;
+; |receiver|baud_done:inst6|Add0~20         ; |receiver|baud_done:inst6|Add0~20         ; out0             ;
+; |receiver|counter:inst9|Equal0~0          ; |receiver|counter:inst9|Equal0~0          ; out0             ;
+; |receiver|baud_done:inst6|Equal0~0        ; |receiver|baud_done:inst6|Equal0~0        ; out0             ;
+; |receiver|baud_done:inst6|Equal1~0        ; |receiver|baud_done:inst6|Equal1~0        ; out0             ;
++-------------------------------------------+-------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                 ;
++-------------------------------------------+-------------------------------------------+------------------+
+; Node Name                                 ; Output Port Name                          ; Output Port Type ;
++-------------------------------------------+-------------------------------------------+------------------+
+; |receiver|7seg1[6]                        ; |receiver|7seg1[6]                        ; pin_out          ;
+; |receiver|7seg1[3]                        ; |receiver|7seg1[3]                        ; pin_out          ;
+; |receiver|7seg1[2]                        ; |receiver|7seg1[2]                        ; pin_out          ;
+; |receiver|7seg1[1]                        ; |receiver|7seg1[1]                        ; pin_out          ;
+; |receiver|7seg1[0]                        ; |receiver|7seg1[0]                        ; pin_out          ;
+; |receiver|7seg2[6]                        ; |receiver|7seg2[6]                        ; pin_out          ;
+; |receiver|7seg2[4]                        ; |receiver|7seg2[4]                        ; pin_out          ;
+; |receiver|7seg2[3]                        ; |receiver|7seg2[3]                        ; pin_out          ;
+; |receiver|7seg2[1]                        ; |receiver|7seg2[1]                        ; pin_out          ;
+; |receiver|7seg2[0]                        ; |receiver|7seg2[0]                        ; pin_out          ;
+; |receiver|seg:inst3|WideOr0               ; |receiver|seg:inst3|WideOr0               ; out0             ;
+; |receiver|seg:inst3|WideOr2               ; |receiver|seg:inst3|WideOr2               ; out0             ;
+; |receiver|seg:inst3|WideOr3               ; |receiver|seg:inst3|WideOr3               ; out0             ;
+; |receiver|seg:inst3|WideOr5               ; |receiver|seg:inst3|WideOr5               ; out0             ;
+; |receiver|seg:inst3|WideOr6               ; |receiver|seg:inst3|WideOr6               ; out0             ;
+; |receiver|seg:inst1|WideOr0               ; |receiver|seg:inst1|WideOr0               ; out0             ;
+; |receiver|seg:inst1|WideOr3               ; |receiver|seg:inst1|WideOr3               ; out0             ;
+; |receiver|seg:inst1|WideOr4               ; |receiver|seg:inst1|WideOr4               ; out0             ;
+; |receiver|seg:inst1|WideOr5               ; |receiver|seg:inst1|WideOr5               ; out0             ;
+; |receiver|seg:inst1|WideOr6               ; |receiver|seg:inst1|WideOr6               ; out0             ;
+; |receiver|rxd_shift:inst8|data_out2[2]    ; |receiver|rxd_shift:inst8|data_out2[2]    ; out              ;
+; |receiver|rxd_shift:inst8|data_out2[3]    ; |receiver|rxd_shift:inst8|data_out2[3]    ; out              ;
+; |receiver|rxd_shift:inst8|data_out1[2]    ; |receiver|rxd_shift:inst8|data_out1[2]    ; out              ;
+; |receiver|rxd_shift:inst8|data_out1[3]    ; |receiver|rxd_shift:inst8|data_out1[3]    ; out              ;
+; |receiver|rxd_shift:inst8|data_out2[0]    ; |receiver|rxd_shift:inst8|data_out2[0]    ; out              ;
+; |receiver|counter:inst9|p_cnt~0           ; |receiver|counter:inst9|p_cnt~0           ; out              ;
+; |receiver|counter:inst9|n_cnt[4]          ; |receiver|counter:inst9|n_cnt[4]          ; out              ;
+; |receiver|counter:inst9|p_cnt[4]          ; |receiver|counter:inst9|p_cnt[4]          ; regout           ;
+; |receiver|baud_done:inst6|p_count[11]     ; |receiver|baud_done:inst6|p_count[11]     ; regout           ;
+; |receiver|rxd_controller:inst|n_state~4   ; |receiver|rxd_controller:inst|n_state~4   ; out              ;
+; |receiver|rxd_controller:inst|n_state~5   ; |receiver|rxd_controller:inst|n_state~5   ; out              ;
+; |receiver|rxd_controller:inst|Selector1~2 ; |receiver|rxd_controller:inst|Selector1~2 ; out0             ;
+; |receiver|rxd_controller:inst|Selector2~1 ; |receiver|rxd_controller:inst|Selector2~1 ; out0             ;
+; |receiver|rxd_controller:inst|Selector2~2 ; |receiver|rxd_controller:inst|Selector2~2 ; out0             ;
+; |receiver|rxd_controller:inst|Selector3~1 ; |receiver|rxd_controller:inst|Selector3~1 ; out0             ;
+; |receiver|seg:inst3|Decoder0~0            ; |receiver|seg:inst3|Decoder0~0            ; out              ;
+; |receiver|seg:inst3|Decoder0~1            ; |receiver|seg:inst3|Decoder0~1            ; out              ;
+; |receiver|seg:inst3|Decoder0~3            ; |receiver|seg:inst3|Decoder0~3            ; out              ;
+; |receiver|seg:inst3|Decoder0~4            ; |receiver|seg:inst3|Decoder0~4            ; out              ;
+; |receiver|seg:inst3|Decoder0~5            ; |receiver|seg:inst3|Decoder0~5            ; out              ;
+; |receiver|seg:inst3|Decoder0~6            ; |receiver|seg:inst3|Decoder0~6            ; out              ;
+; |receiver|seg:inst3|Decoder0~7            ; |receiver|seg:inst3|Decoder0~7            ; out              ;
+; |receiver|seg:inst3|Decoder0~8            ; |receiver|seg:inst3|Decoder0~8            ; out              ;
+; |receiver|seg:inst3|Decoder0~9            ; |receiver|seg:inst3|Decoder0~9            ; out              ;
+; |receiver|seg:inst3|Decoder0~10           ; |receiver|seg:inst3|Decoder0~10           ; out              ;
+; |receiver|seg:inst3|Decoder0~11           ; |receiver|seg:inst3|Decoder0~11           ; out              ;
+; |receiver|seg:inst3|Decoder0~12           ; |receiver|seg:inst3|Decoder0~12           ; out              ;
+; |receiver|seg:inst3|Decoder0~13           ; |receiver|seg:inst3|Decoder0~13           ; out              ;
+; |receiver|seg:inst3|Decoder0~14           ; |receiver|seg:inst3|Decoder0~14           ; out              ;
+; |receiver|seg:inst1|Decoder0~0            ; |receiver|seg:inst1|Decoder0~0            ; out              ;
+; |receiver|seg:inst1|Decoder0~1            ; |receiver|seg:inst1|Decoder0~1            ; out              ;
+; |receiver|seg:inst1|Decoder0~2            ; |receiver|seg:inst1|Decoder0~2            ; out              ;
+; |receiver|seg:inst1|Decoder0~4            ; |receiver|seg:inst1|Decoder0~4            ; out              ;
+; |receiver|seg:inst1|Decoder0~5            ; |receiver|seg:inst1|Decoder0~5            ; out              ;
+; |receiver|seg:inst1|Decoder0~6            ; |receiver|seg:inst1|Decoder0~6            ; out              ;
+; |receiver|seg:inst1|Decoder0~7            ; |receiver|seg:inst1|Decoder0~7            ; out              ;
+; |receiver|seg:inst1|Decoder0~8            ; |receiver|seg:inst1|Decoder0~8            ; out              ;
+; |receiver|seg:inst1|Decoder0~9            ; |receiver|seg:inst1|Decoder0~9            ; out              ;
+; |receiver|seg:inst1|Decoder0~10           ; |receiver|seg:inst1|Decoder0~10           ; out              ;
+; |receiver|seg:inst1|Decoder0~11           ; |receiver|seg:inst1|Decoder0~11           ; out              ;
+; |receiver|seg:inst1|Decoder0~12           ; |receiver|seg:inst1|Decoder0~12           ; out              ;
+; |receiver|seg:inst1|Decoder0~13           ; |receiver|seg:inst1|Decoder0~13           ; out              ;
+; |receiver|seg:inst1|Decoder0~14           ; |receiver|seg:inst1|Decoder0~14           ; out              ;
++-------------------------------------------+-------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                   ;
++--------------------------------------------+--------------------------------------------+------------------+
+; Node Name                                  ; Output Port Name                           ; Output Port Type ;
++--------------------------------------------+--------------------------------------------+------------------+
+; |receiver|parity_error                     ; |receiver|parity_error                     ; pin_out          ;
+; |receiver|framing_error                    ; |receiver|framing_error                    ; pin_out          ;
+; |receiver|7seg1[5]                         ; |receiver|7seg1[5]                         ; pin_out          ;
+; |receiver|7seg1[4]                         ; |receiver|7seg1[4]                         ; pin_out          ;
+; |receiver|7seg2[5]                         ; |receiver|7seg2[5]                         ; pin_out          ;
+; |receiver|7seg2[2]                         ; |receiver|7seg2[2]                         ; pin_out          ;
+; |receiver|seg:inst3|WideOr1                ; |receiver|seg:inst3|WideOr1                ; out0             ;
+; |receiver|seg:inst3|WideOr4                ; |receiver|seg:inst3|WideOr4                ; out0             ;
+; |receiver|seg:inst1|WideOr1                ; |receiver|seg:inst1|WideOr1                ; out0             ;
+; |receiver|seg:inst1|WideOr2                ; |receiver|seg:inst1|WideOr2                ; out0             ;
+; |receiver|rxd_shift:inst8|data_out2[1]     ; |receiver|rxd_shift:inst8|data_out2[1]     ; out              ;
+; |receiver|rxd_shift:inst8|data_out1[0]     ; |receiver|rxd_shift:inst8|data_out1[0]     ; out              ;
+; |receiver|rxd_shift:inst8|data_out1[1]     ; |receiver|rxd_shift:inst8|data_out1[1]     ; out              ;
+; |receiver|counter:inst9|p_cnt~0            ; |receiver|counter:inst9|p_cnt~0            ; out              ;
+; |receiver|counter:inst9|n_cnt[4]           ; |receiver|counter:inst9|n_cnt[4]           ; out              ;
+; |receiver|counter:inst9|p_cnt[4]           ; |receiver|counter:inst9|p_cnt[4]           ; regout           ;
+; |receiver|baud_done:inst6|p_count[11]      ; |receiver|baud_done:inst6|p_count[11]      ; regout           ;
+; |receiver|rxd_controller:inst|n_state~4    ; |receiver|rxd_controller:inst|n_state~4    ; out              ;
+; |receiver|rxd_controller:inst|n_state~5    ; |receiver|rxd_controller:inst|n_state~5    ; out              ;
+; |receiver|rxd_controller:inst|n_state~11   ; |receiver|rxd_controller:inst|n_state~11   ; out              ;
+; |receiver|rxd_controller:inst|load_shift   ; |receiver|rxd_controller:inst|load_shift   ; out              ;
+; |receiver|rxd_controller:inst|parity_check ; |receiver|rxd_controller:inst|parity_check ; out              ;
+; |receiver|rxd_parity:inst2|framing_error   ; |receiver|rxd_parity:inst2|framing_error   ; out              ;
+; |receiver|rxd_parity:inst2|parity_error    ; |receiver|rxd_parity:inst2|parity_error    ; out              ;
+; |receiver|rxd_controller:inst|Selector1~2  ; |receiver|rxd_controller:inst|Selector1~2  ; out0             ;
+; |receiver|rxd_controller:inst|Selector2~1  ; |receiver|rxd_controller:inst|Selector2~1  ; out0             ;
+; |receiver|rxd_controller:inst|Selector2~2  ; |receiver|rxd_controller:inst|Selector2~2  ; out0             ;
+; |receiver|rxd_controller:inst|Selector3~1  ; |receiver|rxd_controller:inst|Selector3~1  ; out0             ;
+; |receiver|rxd_controller:inst|Selector4~1  ; |receiver|rxd_controller:inst|Selector4~1  ; out0             ;
+; |receiver|seg:inst3|Decoder0~2             ; |receiver|seg:inst3|Decoder0~2             ; out              ;
+; |receiver|seg:inst1|Decoder0~3             ; |receiver|seg:inst1|Decoder0~3             ; out              ;
++--------------------------------------------+--------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Nov 12 18:22:41 2015
+Info: Command: quartus_sim --simulation_results_format=VWF receiver -c receiver
+Info (324025): Using vector source file "M:/UART/RXD _V2/receiver/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      67.57 %
+Info (328052): Number of transitions in simulation is 877885
+Info (324045): Vector file receiver.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 322 megabytes
+    Info: Processing ended: Thu Nov 12 18:22:45 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+

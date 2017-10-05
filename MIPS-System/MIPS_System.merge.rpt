@@ -1,0 +1,561 @@
+Partition Merge report for MIPS_System
+Wed Mar 30 15:47:27 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "auto_signaltap_0"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Resource Usage Summary
+  7. Partition Merge RAM Summary
+  8. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Partition Merge Summary                                                               ;
++------------------------------------+--------------------------------------------------+
+; Partition Merge Status             ; Successful - Wed Mar 30 15:47:27 2016            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; MIPS_System                                      ;
+; Top-level Entity Name              ; MIPS_System                                      ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 5,488 / 33,216 ( 17 % )                          ;
+;     Total combinational functions  ; 2,805 / 33,216 ( 8 % )                           ;
+;     Dedicated logic registers      ; 3,451 / 33,216 ( 10 % )                          ;
+; Total registers                    ; 3451                                             ;
+; Total pins                         ; 106 / 475 ( 22 % )                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 86,144 / 483,840 ( 18 % )                        ;
+; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                   ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                   ;
++------------------------------------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Post-Fit          ; Post-Fit               ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                               ;
++-----------------------------------------+---------------+-----------+----------------+-------------------+---------------------------------------------------------------------------------------------------------+---------+
+; Name                                    ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                                                                                       ; Details ;
++-----------------------------------------+---------------+-----------+----------------+-------------------+---------------------------------------------------------------------------------------------------------+---------+
+; CLOCK_50                                ; pre-synthesis ; connected ; Top            ; post-fit          ; CLOCK_50                                                                                                ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[0]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[0]~0                                                           ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[0]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[0]~0                                                           ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[10] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[10]~1                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[10] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[10]~1                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[11] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[11]~2                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[11] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[11]~2                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[12] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[12]~3                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[12] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[12]~3                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[13] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[13]~4                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[13] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[13]~4                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[14] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[14]~5                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[14] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[14]~5                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[15] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[15]~6                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[15] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[15]~6                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[16] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[16]~7                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[16] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[16]~7                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[17] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[17]~8                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[17] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[17]~8                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[18] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[18]~9                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[18] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[18]~9                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[19] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[19]~10                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[19] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[19]~10                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[1]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[1]~11                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[1]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[1]~11                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[20] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[20]~12                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[20] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[20]~12                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[21] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[21]~13                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[21] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[21]~13                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[22] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[22]~14                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[22] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[22]~14                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[23] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[23]~15                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[23] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[23]~15                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[24] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[24]~16                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[24] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[24]~16                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[25] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[25]~17                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[25] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[25]~17                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[26] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[26]~18                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[26] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[26]~18                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[27] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[27]~19                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[27] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[27]~19                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[28] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[28]~20                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[28] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[28]~20                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[29] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[29]~21                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[29] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[29]~21                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[2]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[2]~22                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[2]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[2]~22                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[30] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[30]~23                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[30] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[30]~23                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[31] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[31]~24                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[31] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[31]~24                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[3]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[3]~25                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[3]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[3]~25                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[4]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[4]~26                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[4]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[4]~26                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[5]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[5]~27                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[5]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[5]~27                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[6]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[6]~28                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[6]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[6]~28                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[7]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[7]~29                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[7]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[7]~29                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[8]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[8]~30                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[8]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[8]~30                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[9]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[9]~31                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|a[9]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|regfile:rf|rd1[9]~31                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[0]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[0]~5                                                           ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[0]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[0]~5                                                           ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[10] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[10]~7                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[10] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[10]~7                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[11] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[11]~9                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[11] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[11]~9                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[12] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[12]~11                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[12] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[12]~11                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[13] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[13]~13                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[13] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[13]~13                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[14] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[14]~15                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[14] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[14]~15                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[15] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[15]~17                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[15] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[15]~17                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[16] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[16]~19                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[16] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[16]~19                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[17] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[17]~21                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[17] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[17]~21                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[18] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[18]~23                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[18] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[18]~23                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[19] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[19]~25                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[19] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[19]~25                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[1]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[1]~26                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[1]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[1]~26                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[20] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[20]~28                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[20] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[20]~28                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[21] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[21]~30                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[21] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[21]~30                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[22] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[22]~32                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[22] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[22]~32                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[23] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[23]~34                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[23] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[23]~34                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[24] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[24]~36                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[24] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[24]~36                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[25] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[25]~38                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[25] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[25]~38                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[26] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[26]~40                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[26] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[26]~40                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[27] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[27]~42                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[27] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[27]~42                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[28] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[28]~44                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[28] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[28]~44                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[29] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[29]~46                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[29] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[29]~46                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[2]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[2]~47                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[2]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[2]~47                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[30] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[30]~49                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[30] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[30]~49                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[31] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[31]~52                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[31] ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[31]~52                                                         ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[3]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[3]~53                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[3]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[3]~53                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[4]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[4]~54                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[4]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[4]~54                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[5]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[5]~55                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[5]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[5]~55                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[6]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[6]~56                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[6]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[6]~56                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[7]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[7]~57                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[7]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[7]~57                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[8]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[8]~58                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[8]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[8]~58                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[9]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[9]~59                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|alu:alu|b[9]  ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[9]~59                                                          ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[0]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux31~2                                                               ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[0]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux31~2                                                               ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[10]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux21                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[10]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux21                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[11]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux20                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[11]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux20                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[12]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux19                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[12]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux19                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[13]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux18                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[13]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux18                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[14]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux17                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[14]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux17                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[15]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux16                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[15]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux16                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[16]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux15                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[16]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux15                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[17]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux14                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[17]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux14                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[18]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux13                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[18]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux13                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[19]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux12                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[19]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux12                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[1]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux30                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[1]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux30                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[20]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux11                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[20]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux11                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[21]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux10                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[21]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux10                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[22]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux9                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[22]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux9                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[23]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux8                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[23]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux8                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[24]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux7                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[24]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux7                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[25]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux6                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[25]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux6                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[26]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux5                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[26]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux5                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[27]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux4                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[27]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux4                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[28]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux3                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[28]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux3                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[29]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux2                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[29]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux2                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[2]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux29                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[2]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux29                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[30]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux1                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[30]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux1                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[31]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux0                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[31]    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux0                                                                  ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[3]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux28                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[3]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux28                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[4]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux27                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[4]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux27                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[5]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux26                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[5]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux26                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[6]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux25                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[6]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux25                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[7]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux24                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[7]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux24                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[8]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux23                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[8]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux23                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[9]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux22                                                                 ; N/A     ;
+; mips:mips_cpu|datapath:dp|aluout[9]     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|alu:alu|Mux22                                                                 ; N/A     ;
+; mips:mips_cpu|instr[0]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[0]  ; N/A     ;
+; mips:mips_cpu|instr[0]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[0]  ; N/A     ;
+; mips:mips_cpu|instr[10]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[10] ; N/A     ;
+; mips:mips_cpu|instr[10]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[10] ; N/A     ;
+; mips:mips_cpu|instr[11]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[11] ; N/A     ;
+; mips:mips_cpu|instr[11]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[11] ; N/A     ;
+; mips:mips_cpu|instr[12]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[12] ; N/A     ;
+; mips:mips_cpu|instr[12]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[12] ; N/A     ;
+; mips:mips_cpu|instr[13]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[13] ; N/A     ;
+; mips:mips_cpu|instr[13]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[13] ; N/A     ;
+; mips:mips_cpu|instr[14]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[14] ; N/A     ;
+; mips:mips_cpu|instr[14]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[14] ; N/A     ;
+; mips:mips_cpu|instr[15]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[15] ; N/A     ;
+; mips:mips_cpu|instr[15]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[15] ; N/A     ;
+; mips:mips_cpu|instr[16]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[16] ; N/A     ;
+; mips:mips_cpu|instr[16]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[16] ; N/A     ;
+; mips:mips_cpu|instr[17]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[17] ; N/A     ;
+; mips:mips_cpu|instr[17]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[17] ; N/A     ;
+; mips:mips_cpu|instr[18]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[18] ; N/A     ;
+; mips:mips_cpu|instr[18]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[18] ; N/A     ;
+; mips:mips_cpu|instr[19]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[19] ; N/A     ;
+; mips:mips_cpu|instr[19]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[19] ; N/A     ;
+; mips:mips_cpu|instr[1]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[1]  ; N/A     ;
+; mips:mips_cpu|instr[1]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[1]  ; N/A     ;
+; mips:mips_cpu|instr[20]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[20] ; N/A     ;
+; mips:mips_cpu|instr[20]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[20] ; N/A     ;
+; mips:mips_cpu|instr[21]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[21] ; N/A     ;
+; mips:mips_cpu|instr[21]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[21] ; N/A     ;
+; mips:mips_cpu|instr[22]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[22] ; N/A     ;
+; mips:mips_cpu|instr[22]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[22] ; N/A     ;
+; mips:mips_cpu|instr[23]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[23] ; N/A     ;
+; mips:mips_cpu|instr[23]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[23] ; N/A     ;
+; mips:mips_cpu|instr[24]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[24] ; N/A     ;
+; mips:mips_cpu|instr[24]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[24] ; N/A     ;
+; mips:mips_cpu|instr[25]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[25] ; N/A     ;
+; mips:mips_cpu|instr[25]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[25] ; N/A     ;
+; mips:mips_cpu|instr[26]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[26] ; N/A     ;
+; mips:mips_cpu|instr[26]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[26] ; N/A     ;
+; mips:mips_cpu|instr[27]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[27] ; N/A     ;
+; mips:mips_cpu|instr[27]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[27] ; N/A     ;
+; mips:mips_cpu|instr[28]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[28] ; N/A     ;
+; mips:mips_cpu|instr[28]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[28] ; N/A     ;
+; mips:mips_cpu|instr[29]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[29] ; N/A     ;
+; mips:mips_cpu|instr[29]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[29] ; N/A     ;
+; mips:mips_cpu|instr[2]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[2]  ; N/A     ;
+; mips:mips_cpu|instr[2]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[2]  ; N/A     ;
+; mips:mips_cpu|instr[30]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[30] ; N/A     ;
+; mips:mips_cpu|instr[30]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[30] ; N/A     ;
+; mips:mips_cpu|instr[31]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[31] ; N/A     ;
+; mips:mips_cpu|instr[31]                 ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[31] ; N/A     ;
+; mips:mips_cpu|instr[3]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[3]  ; N/A     ;
+; mips:mips_cpu|instr[3]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[3]  ; N/A     ;
+; mips:mips_cpu|instr[4]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[4]  ; N/A     ;
+; mips:mips_cpu|instr[4]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[4]  ; N/A     ;
+; mips:mips_cpu|instr[5]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[5]  ; N/A     ;
+; mips:mips_cpu|instr[5]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[5]  ; N/A     ;
+; mips:mips_cpu|instr[6]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[6]  ; N/A     ;
+; mips:mips_cpu|instr[6]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[6]  ; N/A     ;
+; mips:mips_cpu|instr[7]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[7]  ; N/A     ;
+; mips:mips_cpu|instr[7]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[7]  ; N/A     ;
+; mips:mips_cpu|instr[8]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[8]  ; N/A     ;
+; mips:mips_cpu|instr[8]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[8]  ; N/A     ;
+; mips:mips_cpu|instr[9]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[9]  ; N/A     ;
+; mips:mips_cpu|instr[9]                  ; pre-synthesis ; connected ; Top            ; post-fit          ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|q_a[9]  ; N/A     ;
+; mips:mips_cpu|pc[0]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; GND                                                                                                     ; N/A     ;
+; mips:mips_cpu|pc[0]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; GND                                                                                                     ; N/A     ;
+; mips:mips_cpu|pc[10]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[10]                                                             ; N/A     ;
+; mips:mips_cpu|pc[10]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[10]                                                             ; N/A     ;
+; mips:mips_cpu|pc[11]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[11]                                                             ; N/A     ;
+; mips:mips_cpu|pc[11]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[11]                                                             ; N/A     ;
+; mips:mips_cpu|pc[12]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[12]                                                             ; N/A     ;
+; mips:mips_cpu|pc[12]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[12]                                                             ; N/A     ;
+; mips:mips_cpu|pc[13]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[13]                                                             ; N/A     ;
+; mips:mips_cpu|pc[13]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[13]                                                             ; N/A     ;
+; mips:mips_cpu|pc[14]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[14]                                                             ; N/A     ;
+; mips:mips_cpu|pc[14]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[14]                                                             ; N/A     ;
+; mips:mips_cpu|pc[15]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[15]                                                             ; N/A     ;
+; mips:mips_cpu|pc[15]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[15]                                                             ; N/A     ;
+; mips:mips_cpu|pc[16]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[16]                                                             ; N/A     ;
+; mips:mips_cpu|pc[16]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[16]                                                             ; N/A     ;
+; mips:mips_cpu|pc[17]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[17]                                                             ; N/A     ;
+; mips:mips_cpu|pc[17]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[17]                                                             ; N/A     ;
+; mips:mips_cpu|pc[18]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[18]                                                             ; N/A     ;
+; mips:mips_cpu|pc[18]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[18]                                                             ; N/A     ;
+; mips:mips_cpu|pc[19]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[19]                                                             ; N/A     ;
+; mips:mips_cpu|pc[19]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[19]                                                             ; N/A     ;
+; mips:mips_cpu|pc[1]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; GND                                                                                                     ; N/A     ;
+; mips:mips_cpu|pc[1]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; GND                                                                                                     ; N/A     ;
+; mips:mips_cpu|pc[20]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[20]                                                             ; N/A     ;
+; mips:mips_cpu|pc[20]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[20]                                                             ; N/A     ;
+; mips:mips_cpu|pc[21]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[21]                                                             ; N/A     ;
+; mips:mips_cpu|pc[21]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[21]                                                             ; N/A     ;
+; mips:mips_cpu|pc[22]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[22]                                                             ; N/A     ;
+; mips:mips_cpu|pc[22]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[22]                                                             ; N/A     ;
+; mips:mips_cpu|pc[23]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[23]                                                             ; N/A     ;
+; mips:mips_cpu|pc[23]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[23]                                                             ; N/A     ;
+; mips:mips_cpu|pc[24]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[24]                                                             ; N/A     ;
+; mips:mips_cpu|pc[24]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[24]                                                             ; N/A     ;
+; mips:mips_cpu|pc[25]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[25]                                                             ; N/A     ;
+; mips:mips_cpu|pc[25]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[25]                                                             ; N/A     ;
+; mips:mips_cpu|pc[26]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[26]                                                             ; N/A     ;
+; mips:mips_cpu|pc[26]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[26]                                                             ; N/A     ;
+; mips:mips_cpu|pc[27]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[27]                                                             ; N/A     ;
+; mips:mips_cpu|pc[27]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[27]                                                             ; N/A     ;
+; mips:mips_cpu|pc[28]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[28]                                                             ; N/A     ;
+; mips:mips_cpu|pc[28]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[28]                                                             ; N/A     ;
+; mips:mips_cpu|pc[29]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[29]                                                             ; N/A     ;
+; mips:mips_cpu|pc[29]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[29]                                                             ; N/A     ;
+; mips:mips_cpu|pc[2]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[2]                                                              ; N/A     ;
+; mips:mips_cpu|pc[2]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[2]                                                              ; N/A     ;
+; mips:mips_cpu|pc[30]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[30]                                                             ; N/A     ;
+; mips:mips_cpu|pc[30]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[30]                                                             ; N/A     ;
+; mips:mips_cpu|pc[31]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[31]                                                             ; N/A     ;
+; mips:mips_cpu|pc[31]                    ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[31]                                                             ; N/A     ;
+; mips:mips_cpu|pc[3]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[3]                                                              ; N/A     ;
+; mips:mips_cpu|pc[3]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[3]                                                              ; N/A     ;
+; mips:mips_cpu|pc[4]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[4]                                                              ; N/A     ;
+; mips:mips_cpu|pc[4]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[4]                                                              ; N/A     ;
+; mips:mips_cpu|pc[5]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[5]                                                              ; N/A     ;
+; mips:mips_cpu|pc[5]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[5]                                                              ; N/A     ;
+; mips:mips_cpu|pc[6]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[6]                                                              ; N/A     ;
+; mips:mips_cpu|pc[6]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[6]                                                              ; N/A     ;
+; mips:mips_cpu|pc[7]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[7]                                                              ; N/A     ;
+; mips:mips_cpu|pc[7]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[7]                                                              ; N/A     ;
+; mips:mips_cpu|pc[8]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[8]                                                              ; N/A     ;
+; mips:mips_cpu|pc[8]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[8]                                                              ; N/A     ;
+; mips:mips_cpu|pc[9]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[9]                                                              ; N/A     ;
+; mips:mips_cpu|pc[9]                     ; pre-synthesis ; connected ; Top            ; post-fit          ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[9]                                                              ; N/A     ;
+; KEY[0]                                  ; post-fitting  ; connected ; Top            ; post-fit          ; KEY[0]                                                                                                  ; N/A     ;
+; KEY[0]                                  ; post-fitting  ; connected ; Top            ; post-fit          ; KEY[0]                                                                                                  ; N/A     ;
++-----------------------------------------+---------------+-----------+----------------+-------------------+---------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                                         ;
++---------------------------------------------+----------------------+-----------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top                  ; sld_hub:auto_hub      ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+-----------------------+--------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 3000 / 33216 ( 9 % ) ; 144 / 33216 ( < 1 % ) ; 2441 / 33216 ( 7 % )           ; 0 / 33216 ( 0 % )              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Total combinational functions               ; 1943                 ; 120                   ; 742                            ; 0                              ;
+; Logic element usage by number of LUT inputs ;                      ;                       ;                                ;                                ;
+;     -- 4 input functions                    ; 1639                 ; 54                    ; 465                            ; 0                              ;
+;     -- 3 input functions                    ; 161                  ; 29                    ; 221                            ; 0                              ;
+;     -- <=2 input functions                  ; 143                  ; 37                    ; 56                             ; 0                              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Logic elements by mode                      ;                      ;                       ;                                ;                                ;
+;     -- normal mode                          ; 1823                 ; 112                   ; 704                            ; 0                              ;
+;     -- arithmetic mode                      ; 120                  ; 8                     ; 38                             ; 0                              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Total registers                             ; 1219                 ; 86                    ; 2146                           ; 0                              ;
+;     -- Dedicated logic registers            ; 1219 / 33216 ( 4 % ) ; 86 / 33216 ( < 1 % )  ; 2146 / 33216 ( 6 % )           ; 0 / 33216 ( 0 % )              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Virtual pins                                ; 0                    ; 0                     ; 0                              ; 0                              ;
+; I/O pins                                    ; 106                  ; 0                     ; 0                              ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )       ; 0 / 70 ( 0 % )        ; 0 / 70 ( 0 % )                 ; 0 / 70 ( 0 % )                 ;
+; Total memory bits                           ; 65536                ; 0                     ; 20608                          ; 0                              ;
+; Total RAM block bits                        ; 73728                ; 0                     ; 23040                          ; 0                              ;
+; JTAG                                        ; 1 / 1 ( 100 % )      ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )                  ; 0 / 1 ( 0 % )                  ;
+; PLL                                         ; 0 / 4 ( 0 % )        ; 0 / 4 ( 0 % )         ; 0 / 4 ( 0 % )                  ; 1 / 4 ( 25 % )                 ;
+; M4K                                         ; 16 / 105 ( 15 % )    ; 0 / 105 ( 0 % )       ; 5 / 105 ( 4 % )                ; 0 / 105 ( 0 % )                ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Connections                                 ;                      ;                       ;                                ;                                ;
+;     -- Input Connections                    ; 1253                 ; 128                   ; 3048                           ; 1                              ;
+;     -- Registered Input Connections         ; 1219                 ; 97                    ; 2486                           ; 0                              ;
+;     -- Output Connections                   ; 2913                 ; 263                   ; 2                              ; 1252                           ;
+;     -- Registered Output Connections        ; 60                   ; 262                   ; 0                              ; 0                              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Internal Connections                        ;                      ;                       ;                                ;                                ;
+;     -- Total Connections                    ; 14534                ; 915                   ; 11541                          ; 1253                           ;
+;     -- Registered Connections               ; 3827                 ; 694                   ; 9084                           ; 0                              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; External Connections                        ;                      ;                       ;                                ;                                ;
+;     -- Top                                  ; 0                    ; 119                   ; 2794                           ; 1253                           ;
+;     -- sld_hub:auto_hub                     ; 119                  ; 16                    ; 256                            ; 0                              ;
+;     -- sld_signaltap:auto_signaltap_0       ; 2794                 ; 256                   ; 0                              ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 1253                 ; 0                     ; 0                              ; 0                              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Partition Interface                         ;                      ;                       ;                                ;                                ;
+;     -- Input Ports                          ; 26                   ; 19                    ; 379                            ; 1                              ;
+;     -- Output Ports                         ; 245                  ; 37                    ; 332                            ; 4                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                     ; 0                              ; 0                              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Registered Ports                            ;                      ;                       ;                                ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 4                     ; 327                            ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 26                    ; 323                            ; 0                              ;
+;                                             ;                      ;                       ;                                ;                                ;
+; Port Connectivity                           ;                      ;                       ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 1                     ; 4                              ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 1                     ; 0                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                     ; 0                              ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                     ; 0                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 1                     ; 35                             ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                     ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 2                     ; 40                             ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 15                    ; 323                            ; 0                              ;
++---------------------------------------------+----------------------+-----------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++-----------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 5,488 / 33,216 ( 16 % ) ;
+;                                             ;                         ;
+; Total combinational functions               ; 2805                    ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 2158                    ;
+;     -- 3 input functions                    ; 411                     ;
+;     -- <=2 input functions                  ; 236                     ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 2639                    ;
+;     -- arithmetic mode                      ; 166                     ;
+;                                             ;                         ;
+; Total registers                             ; 3451                    ;
+;     -- Dedicated logic registers            ; 3451                    ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 106                     ;
+; Total memory bits                           ; 86144                   ;
+; Embedded Multiplier 9-bit elements          ; 0                       ;
+; Total PLLs                                  ; 1                       ;
+;     -- PLLs                                 ; 1                       ;
+;                                             ;                         ;
+; Maximum fan-out node                        ; CLOCK_50                ;
+; Maximum fan-out                             ; 1550                    ;
+; Total fan-out                               ; 23281                   ;
+; Average fan-out                             ; 3.54                    ;
++---------------------------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF            ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------+
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_i9b2:auto_generated|ALTSYNCRAM                                                                                            ; AUTO ; True Dual Port   ; 2048         ; 32           ; 2048         ; 32           ; 65536 ; insts_data.mif ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_us14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 161          ; 128          ; 161          ; 20608 ; None           ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Partition Merge
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Mar 30 15:47:21 2016
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off MIPS_System -c MIPS_System --merge=on
+Info (35006): Using previously generated Fitter netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 323 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 20 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[17]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+Info (21057): Implemented 5931 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 84 output pins
+    Info (21061): Implemented 5642 logic cells
+    Info (21064): Implemented 177 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 496 megabytes
+    Info: Processing ended: Wed Mar 30 15:47:27 2016
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
+
+
